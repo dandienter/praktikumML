@@ -1,9 +1,10 @@
 # Praktikum Machine Learning
 
-Kumpulan praktikum Machine Learning — 14 bab, dari konsep dasar hingga mini project end-to-end.
-Setiap bab berisi notebook Python (.ipynb) yang sudah dieksekusi lengkap dengan output, penjelasan,
-percobaan mandiri, studi kasus, dan latihan praktikum yang dikerjakan. Dataset disimpan dalam
-format CSV di tiap folder bab sehingga notebook bisa dijalankan secara offline.
+Kumpulan praktikum Machine Learning - 14 bab, dari konsep dasar hingga mini project end-to-end.
+Setiap bab berisi notebook Python (.ipynb) yang sudah dieksekusi lengkap dengan output dan
+penjelasan. Bab 1 berisi praktikum dasar, sedangkan Bab 2-13 berfokus pada Latihan Praktikum
+dari modul. Dataset disimpan dalam format CSV di tiap folder bab (atau dimuat langsung dari
+scikit-learn) sehingga notebook bisa dijalankan secara offline maupun di Google Colab.
 
 ## Identitas
 
@@ -46,14 +47,38 @@ praktikumML/
 │   ├── praktikum-bab-05.pdf
 │   ├── README.md
 │   └── data/breast_cancer.csv
-├── bab-06-knn-naive-bayes/          # ✅ Latihan Praktikum
-├── bab-07-evaluasi-model/           # ✅ Latihan Praktikum
-├── bab-08-support-vector-machine/   # ✅ Latihan Praktikum
-├── bab-09-ensemble-methods/         # ✅ Latihan Praktikum
-├── bab-10-clustering/               # ✅ Latihan Praktikum
-├── bab-11-pca-reduksi-dimensi/       # ✅ Latihan Praktikum
-├── bab-12-neural-networks/          # ✅ Latihan Praktikum
-├── bab-13-convolutional-neural-networks/ # ✅ Latihan Praktikum
+├── bab-06-knn-naive-bayes/
+│   ├── praktikum-bab-06.ipynb
+│   ├── praktikum-bab-06.pdf
+│   └── README.md
+├── bab-07-evaluasi-model/
+│   ├── praktikum-bab-07.ipynb
+│   ├── praktikum-bab-07.pdf
+│   └── README.md
+├── bab-08-support-vector-machine/
+│   ├── praktikum-bab-08.ipynb
+│   ├── praktikum-bab-08.pdf
+│   └── README.md
+├── bab-09-ensemble-methods/
+│   ├── praktikum-bab-09.ipynb
+│   ├── praktikum-bab-09.pdf
+│   └── README.md
+├── bab-10-clustering/
+│   ├── praktikum-bab-10.ipynb
+│   ├── praktikum-bab-10.pdf
+│   └── README.md
+├── bab-11-pca-reduksi-dimensi/
+│   ├── praktikum-bab-11.ipynb
+│   ├── praktikum-bab-11.pdf
+│   └── README.md
+├── bab-12-neural-networks/
+│   ├── praktikum-bab-12.ipynb
+│   ├── praktikum-bab-12.pdf
+│   └── README.md
+├── bab-13-convolutional-neural-networks/
+│   ├── praktikum-bab-13.ipynb
+│   ├── praktikum-bab-13.pdf
+│   └── README.md
 └── bab-14-mini-project-end-to-end/   # ⏳ segera hadir
 ```
 
@@ -66,14 +91,14 @@ praktikumML/
 | 3 | Data Preparation Lanjutan: Missing Values, Outlier, dan Imbalanced Data | ✅ Lengkap |
 | 4 | Feature Engineering: Konstruksi, Seleksi Fitur, dan Pipeline Scikit-Learn | ✅ Lengkap |
 | 5 | Decision Tree: Algoritma CART/ID3 dan Teknik Pruning | ✅ Lengkap |
-| 6 | K-Nearest Neighbors (KNN) dan Naive Bayes Classifier | ⏳ Segera hadir |
-| 7 | Evaluasi Model: Confusion Matrix, Precision-Recall, ROC-AUC, dan Stratified K-Fold CV | ⏳ Segera hadir |
-| 8 | Support Vector Machine: Hyperplane, Margin, dan Kernel Trick | ⏳ Segera hadir |
-| 9 | Ensemble Learning: Random Forest, Bagging, dan Boosting | ⏳ Segera hadir |
-| 10 | Clustering: K-Means, Hierarchical Clustering, dan DBSCAN | ⏳ Segera hadir |
-| 11 | Dimensionality Reduction: PCA, t-SNE, dan LDA | ⏳ Segera hadir |
-| 12 | Neural Network: Multi-Layer Perceptron (MLP) | ⏳ Segera hadir |
-| 13 | Convolutional Neural Network (CNN) dan Transfer Learning | ⏳ Segera hadir |
+| 6 | K-Nearest Neighbors (KNN) dan Naive Bayes Classifier | ✅ Lengkap (Latihan Praktikum) |
+| 7 | Evaluasi Model: Confusion Matrix, Precision-Recall, ROC-AUC, dan Stratified K-Fold CV | ✅ Lengkap (Latihan Praktikum) |
+| 8 | Support Vector Machine: Hyperplane, Margin, dan Kernel Trick | ✅ Lengkap (Latihan Praktikum) |
+| 9 | Ensemble Learning: Random Forest, Bagging, dan Boosting | ✅ Lengkap (Latihan Praktikum) |
+| 10 | Clustering: K-Means, Hierarchical Clustering, dan DBSCAN | ✅ Lengkap (Latihan Praktikum) |
+| 11 | Dimensionality Reduction: PCA, t-SNE, dan LDA | ✅ Lengkap (Latihan Praktikum) |
+| 12 | Neural Network: Multi-Layer Perceptron (MLP) | ✅ Lengkap (Latihan Praktikum) |
+| 13 | Convolutional Neural Network (CNN) dan Transfer Learning | ✅ Lengkap (Latihan Praktikum) |
 | 14 | Mini Project End-to-End: Komparasi Model, Tuning, dan Deployment | ⏳ Segera hadir |
 
 ## Tools yang Digunakan
@@ -94,12 +119,16 @@ praktikumML/
 | Dataset | Sumber | Dipakai di |
 |---|---|---|
 | Iris (150 sampel, 4 fitur, 3 spesies) | `sklearn.datasets.load_iris` (data real Fisher), dimuat langsung di notebook | Bab 1 |
-| Dataset sintetis klasifikasi (1000 sampel, 10 fitur, imbalance 0.8/0.2) | `sklearn.datasets.make_classification` sesuai Modul Bab 2 bagian 2.12 | Bab 2 |
-| Telco Customer Churn (7043 pelanggan) | Kaggle — Telco Customer Churn | Bab 2 (Latihan 1) |
-| Dataset sintetis klasifikasi (2000 sampel, 8 fitur, imbalance 0.95/0.05, missing 5% simulasi) | `sklearn.datasets.make_classification` sesuai Modul Bab 3 bagian 3.9 | Bab 3 |
-| Breast Cancer Wisconsin (569 sampel, 30 fitur) | `sklearn.datasets.load_breast_cancer`, diekspor ke CSV | Bab 4 (latihan), 5 |
-| Dataset sintetis properti (500 baris) | Dibangkitkan di notebook sesuai Modul Bab 4 bagian 4.10 (`np.random.default_rng(42)`) | Bab 4 |
-| Titanic (891 penumpang) | `seaborn.load_dataset('titanic')`, diekspor ke CSV | Bab 4 |
+| Dataset sintetis klasifikasi (1000 sampel, 10 fitur, imbalance 0.8/0.2) | `sklearn.datasets.make_classification`, dibuat di cell Latihan 2 | Bab 2 (Latihan 2: diagnosis bias-variance) |
+| Telco Customer Churn (7043 pelanggan) | Kaggle - Telco Customer Churn | Bab 2 (Latihan 1) |
+| Dataset sintetis klasifikasi (2000 sampel, 8 fitur, imbalance 0.95/0.05, missing 5% simulasi) | `sklearn.datasets.make_classification`, dibuat di cell setup Latihan | Bab 3 (Latihan 1 & 2) |
+| Breast Cancer Wisconsin (569 sampel, 30 fitur) | `sklearn.datasets.load_breast_cancer`, diekspor ke CSV | Bab 4 (latihan), 5, 6, 7, 8, 9, 11 |
+| Titanic (891 penumpang) | `seaborn.load_dataset('titanic')`, diekspor ke CSV | Bab 4 (Latihan 2) |
+| Dataset teks spam kecil (buatan sendiri) | Didefinisikan langsung di notebook | Bab 6 (Latihan: MultinomialNB) |
+| Dataset sintetis clustering (5 blob) | `sklearn.datasets.make_blobs`, sebagai pengganti Mall Customer Segmentation | Bab 10 |
+| Wine (178 sampel, 13 fitur) | `sklearn.datasets.load_wine`, dimuat langsung di notebook | Bab 11 |
+| Digits (1797 citra 8x8, 10 kelas angka) | `sklearn.datasets.load_digits`, dimuat langsung di notebook | Bab 12 |
+| CIFAR-10 subset (500 citra/kelas train, 100 citra/kelas test) | `keras.datasets.cifar10`, diunduh otomatis saat dijalankan | Bab 13 |
 
 ## Cara Menjalankan
 
@@ -114,6 +143,14 @@ Klik badge di bawah untuk membuka notebook langsung di Colab (atau unggah file `
 | Bab 3 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-03-data-preparation/praktikum-bab-03.ipynb) |
 | Bab 4 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb) |
 | Bab 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab-05.ipynb) |
+| Bab 6 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-06-knn-naive-bayes/praktikum-bab-06.ipynb) |
+| Bab 7 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-07-evaluasi-model/praktikum-bab-07.ipynb) |
+| Bab 8 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-08-support-vector-machine/praktikum-bab-08.ipynb) |
+| Bab 9 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-09-ensemble-methods/praktikum-bab-09.ipynb) |
+| Bab 10 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-10-clustering/praktikum-bab-10.ipynb) |
+| Bab 11 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-11-pca-reduksi-dimensi/praktikum-bab-11.ipynb) |
+| Bab 12 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-12-neural-networks/praktikum-bab-12.ipynb) |
+| Bab 13 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-13-convolutional-neural-networks/praktikum-bab-13.ipynb) |
 
 > Catatan: setiap notebook diawali **Sel 0 - Persiapan Awal** yang otomatis mengunduh file-file `data/` dari repo ini saat dibuka di Colab, jadi tinggal **Runtime > Run all** dan semuanya langsung jalan (termasuk Latihan Praktikum).
 

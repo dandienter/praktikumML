@@ -1,17 +1,21 @@
-# Bab 2 — Workflow Machine Learning, CRISP-DM, dan Diagnosis Bias-Variance
+# Bab 2: Workflow Machine Learning, CRISP-DM, dan Diagnosis Bias-Variance
 
 ## Tujuan
-Memahami 6 fase CRISP-DM, pembagian data train/validation/test, stratified sampling, dan cara mendiagnosis bias-variance lewat learning curve (data sintetis + Decision Tree).
+Memahami 6 fase CRISP-DM lewat studi kasus nyata dan cara mendiagnosis bias-variance lewat learning curve (data sintetis + Decision Tree).
 
 ## Isi
-- `praktikum-bab-02.ipynb` — notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` — versi PDF bergaya modul
-- `data/` — dataset yang dipakai notebook (format CSV, bisa dipakai offline)
+- `praktikum-bab-02.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
+- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
+
+## Latihan Praktikum
+- **Latihan 1 - Memetakan proyek nyata ke CRISP-DM:** studi kasus prediksi churn pelanggan telekomunikasi (dataset Telco Customer Churn, 7.043 pelanggan). Eksplorasi data menemukan sinyal bisnis terkuat di `Contract` (month-to-month churn 42,7% vs kontrak 2 tahun 2,8%), lalu tiap temuan dipetakan ke 6 fase CRISP-DM dengan aktivitas konkret.
+- **Latihan 2 - Diagnosis bias-variance:** membandingkan learning curve Decision Tree untuk `max_depth` 1, 4, dan None pada data sintetis. Hasil: `max_depth=1` underfitting (train 0.849, validasi 0.800), `max_depth=4` paling seimbang (train 0.952, validasi 0.866), `max_depth=None` overfitting (train 1.000, validasi 0.858). Dilengkapi 3 grafik learning curve.
 
 ## Sumber Data
-Data sintetis `make_classification` (1000 sampel, 10 fitur, 6 informatif, imbalance kelas 0.8/0.2, `random_state=42`) untuk bagian 2.12 (modul); telco-customer-churn.csv — dipakai untuk cuplikan data pada latihan pemetaan CRISP-DM (2.13).
+Data sintetis `make_classification` (1000 sampel, 10 fitur, 6 informatif, imbalance kelas 0.8/0.2, `random_state=42`) dibuat langsung di cell Latihan 2; `data/telco-customer-churn.csv` dipakai untuk Latihan 1.
 
 ## Cara Menjalankan
 1. Buka `praktikum-bab-02.ipynb` di Google Colab (unggah file + folder `data/`) atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All).
-3. Dataset dibaca dari folder `data/` — tidak perlu mengunduh apa pun.
+3. Dataset dibaca dari folder `data/` - tidak perlu mengunduh apa pun.

@@ -82,12 +82,29 @@ def render_code_cell(src, exec_count):
             f'<div class="codebody">{highlighted}</div></div>')
 
 
+# pola noise stderr TensorFlow yang dibuang dari output stream di PDF
+TF_NOISE = (
+    "absl::InitializeLog()",
+    "oneDNN custom operations",
+    "TF_ENABLE_ONEDNN_OPTS",
+    "Could not find cuda drivers",
+    "TF-TRT Warning",
+    "cuda_dnn.cc",
+)
+
+
+def clean_stream(text):
+    lines = text.split("\n")
+    kept = [ln for ln in lines if not any(p in ln for p in TF_NOISE)]
+    return "\n".join(kept)
+
+
 def render_outputs(outputs, fig_counter):
     parts = []
     for o in outputs:
         otype = o.get("output_type")
         if otype == "stream":
-            text = "".join(o.get("text", ""))
+            text = clean_stream("".join(o.get("text", "")))
             if text.strip():
                 parts.append(f'<pre class="output">{htmlmod.escape(text)}</pre>')
         elif otype in ("execute_result", "display_data"):
@@ -142,6 +159,7 @@ body { font-family: 'DejaVu Sans', sans-serif; font-size: 10.5pt; line-height: 1
 .cover .ident td { padding: 1.6mm 0; vertical-align: top; color: #fff; }
 .cover .ident td:first-child { color: #9fc2e8; width: 32mm; }
 .cover .tanggal { margin-top: 10mm; color: #9fc2e8; font-size: 11pt; }
+.toc { break-inside: avoid; page-break-inside: avoid; }
 .toc h2, .tools h2 { font-size: 16pt; color: #0f2a4a; border-bottom: 2px solid #0f2a4a; padding-bottom: 2mm; }
 .tools-inline { font-size: 10.5pt; line-height: 1.8; color: #1a1a1a; margin-top: 3mm; }
 .tools-inline b { color: #0f2a4a; }
@@ -205,10 +223,11 @@ def build(nb_path, bab, judul, out_pdf):
     nb = nbformat.read(nb_path, as_version=4)
     toc_entries, counter, fig_counter = [], {}, [0]
 
-    # Grup "bab + subbab": bungkus h2 + isi pembuka + h3 pertama dalam satu
-    # div.keep agar judul bab tidak pernah terpisah halaman dari subbabnya.
+    # Grup heading: setiap H2/H3 dibungkus bersama blok pertama sesudahnya
+    # dalam satu div.keep, agar judul bab/subbab tidak pernah nanggung di
+    # bawah halaman. H2 juga digabung dengan H3 pertamanya bila berurutan.
     body_parts = []
-    pending = None  # buffer grup h2 yang sedang dibuka
+    pending = None  # buffer grup heading yang sedang dibuka
 
     def flush_pending():
         nonlocal pending
@@ -229,11 +248,12 @@ def build(nb_path, bab, judul, out_pdf):
             if is_h2:
                 flush_pending()
                 pending = [html]
-            elif is_h3 and pending is not None:
-                pending.append(html)
+            elif is_h3:
                 flush_pending()
+                pending = [html]
             elif pending is not None:
                 pending.append(html)
+                flush_pending()
             else:
                 body_parts.append(html)
         elif cell.cell_type == "code":
@@ -258,11 +278,12 @@ def build(nb_path, bab, judul, out_pdf):
                 body_parts.append(cell_html)
     flush_pending()
 
-    # Daftar isi
+    # Daftar isi: hanya H2 agar selalu muat 1 halaman
     toc_items = []
     for level, hid, text in toc_entries:
-        cls = "h2" if level == "h2" else "h3"
-        toc_items.append(f'<li class="{cls}"><a href="#{hid}">{htmlmod.escape(text)}</a></li>')
+        if level != "h2":
+            continue
+        toc_items.append(f'<li class="h2"><a href="#{hid}">{htmlmod.escape(text)}</a></li>')
     toc_html = ("<section class='toc'><h2>Daftar Isi</h2><ul>" + "\n".join(toc_items) + "</ul></section>"
                 if toc_items else "")
 
