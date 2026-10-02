@@ -46,14 +46,14 @@ praktikumML/
 │   ├── praktikum-bab-05.pdf
 │   ├── README.md
 │   └── data/breast_cancer.csv
-├── bab-06-knn-naive-bayes/           # ⏳ segera hadir
-├── bab-07-evaluasi-model/            # ⏳ segera hadir
-├── bab-08-support-vector-machine/    # ⏳ segera hadir
-├── bab-09-ensemble-learning/        # ⏳ segera hadir
-├── bab-10-clustering/                # ⏳ segera hadir
-├── bab-11-dimensionality-reduction/  # ⏳ segera hadir
-├── bab-12-neural-network-mlp/        # ⏳ segera hadir
-├── bab-13-cnn-transfer-learning/     # ⏳ segera hadir
+├── bab-06-knn-naive-bayes/          # ✅ Latihan Praktikum
+├── bab-07-evaluasi-model/           # ✅ Latihan Praktikum
+├── bab-08-support-vector-machine/   # ✅ Latihan Praktikum
+├── bab-09-ensemble-methods/         # ✅ Latihan Praktikum
+├── bab-10-clustering/               # ✅ Latihan Praktikum
+├── bab-11-pca-reduksi-dimensi/       # ✅ Latihan Praktikum
+├── bab-12-neural-networks/          # ✅ Latihan Praktikum
+├── bab-13-convolutional-neural-networks/ # ✅ Latihan Praktikum
 └── bab-14-mini-project-end-to-end/   # ⏳ segera hadir
 ```
 
