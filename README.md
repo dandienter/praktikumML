@@ -103,6 +103,13 @@ praktikumML/
 | 13 | Convolutional Neural Network (CNN) dan Transfer Learning | ✅ Lengkap (Latihan Praktikum) |
 | 14 | Mini Project End-to-End: Komparasi Model, Tuning, dan Deployment | ⏳ Segera hadir |
 
+## Glosarium
+
+Istilah-istilah dan tools dari seluruh bab (Bab 1-13) dirangkum ringkas di satu dokumen:
+
+- [GLOSARIUM.md](GLOSARIUM.md) - versi markdown
+- [GLOSARIUM.pdf](GLOSARIUM.pdf) - versi PDF siap cetak/baca
+
 ## Tools yang Digunakan
 
 | Perangkat | Versi |
