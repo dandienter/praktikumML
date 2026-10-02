@@ -1,7 +1,7 @@
 # Bab 12: Neural Networks
 
 ## Tujuan
-Memahami cara membangun dan melatih MLP dengan Keras melalui dua latihan modul: eksperimen arsitektur hidden layer dan early stopping untuk mencegah overfitting (dataset Digits).
+Memahami cara membangun dan melatih MLP dengan Keras melalui dua latihan modul (eksperimen arsitektur hidden layer dan early stopping untuk mencegah overfitting) plus tiga Percobaan Mandiri: banding jumlah hidden layer, banding fungsi aktivasi (relu/tanh/sigmoid), dan banding learning rate/optimizer (dataset Digits).
 
 ## Isi
 - `praktikum-bab-12.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
