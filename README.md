@@ -26,18 +26,16 @@ praktikumML/
 ├── bab-01-konsep-dasar-machine-learning/
 │   ├── praktikum-bab-01.ipynb
 │   ├── praktikum-bab-01.pdf
-│   ├── README.md
-│   └── data/iris.csv
+│   └── README.md
 ├── bab-02-workflow-crisp-dm-bias-variance/
 │   ├── praktikum-bab-02.ipynb
 │   ├── praktikum-bab-02.pdf
 │   ├── README.md
-│   └── data/{breast_cancer.csv, telco-customer-churn.csv}
+│   └── data/telco-customer-churn.csv
 ├── bab-03-data-preparation/
 │   ├── praktikum-bab-03.ipynb
 │   ├── praktikum-bab-03.pdf
-│   ├── README.md
-│   └── data/telco-customer-churn.csv
+│   └── README.md
 ├── bab-04-feature-engineering-pipeline/
 │   ├── praktikum-bab-04.ipynb
 │   ├── praktikum-bab-04.pdf
@@ -95,9 +93,11 @@ praktikumML/
 
 | Dataset | Sumber | Dipakai di |
 |---|---|---|
-| Iris (150 sampel, 4 fitur, 3 spesies) | `sklearn.datasets.load_iris` (data real Fisher), diekspor ke CSV | Bab 1 |
-| Breast Cancer Wisconsin (569 sampel, 30 fitur) | `sklearn.datasets.load_breast_cancer`, diekspor ke CSV | Bab 2, 4, 5 |
-| Telco Customer Churn (7043 pelanggan) | Kaggle — Telco Customer Churn | Bab 2 (latihan), Bab 3 |
+| Iris (150 sampel, 4 fitur, 3 spesies) | `sklearn.datasets.load_iris` (data real Fisher), dimuat langsung di notebook | Bab 1 |
+| Dataset sintetis klasifikasi (1000 sampel, 10 fitur, imbalance 0.8/0.2) | `sklearn.datasets.make_classification` sesuai Modul Bab 2 bagian 2.12 | Bab 2 |
+| Telco Customer Churn (7043 pelanggan) | Kaggle — Telco Customer Churn | Bab 2 (Latihan 1) |
+| Dataset sintetis klasifikasi (2000 sampel, 8 fitur, imbalance 0.95/0.05, missing 5% simulasi) | `sklearn.datasets.make_classification` sesuai Modul Bab 3 bagian 3.9 | Bab 3 |
+| Breast Cancer Wisconsin (569 sampel, 30 fitur) | `sklearn.datasets.load_breast_cancer`, diekspor ke CSV | Bab 4 (latihan), 5 |
 | Dataset sintetis properti (500 baris) | Dibangkitkan di notebook sesuai Modul Bab 4 bagian 4.10 (`np.random.default_rng(42)`) | Bab 4 |
 | Titanic (891 penumpang) | `seaborn.load_dataset('titanic')`, diekspor ke CSV | Bab 4 |
 

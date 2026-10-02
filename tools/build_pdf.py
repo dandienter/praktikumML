@@ -191,6 +191,8 @@ pre.output {
   white-space: pre-wrap !important;
   overflow-wrap: anywhere !important;
   word-wrap: break-word !important;
+  break-inside: auto !important;
+  page-break-inside: auto !important;
 }
 """
 
@@ -215,13 +217,13 @@ def build(nb_path, bab, judul, out_pdf):
             out_html = render_outputs(cell.get("outputs", []), fig_counter)
             if not src and not out_html:
                 continue
-            # bungkus kode + outputnya dalam .keep agar tidak terpisah halaman
-            parts = ['<div class="keep">']
+            # kode (.codecell) tetap atomik; output boleh mengalir ke halaman berikut
+            # supaya tidak ada halaman setengah kosong
+            parts = []
             if src:
                 parts.append(render_code_cell(src, cell.get("execution_count")))
             if out_html:
                 parts.append(out_html)
-            parts.append('</div>')
             body_parts.append("\n".join(parts))
 
     # Daftar isi
