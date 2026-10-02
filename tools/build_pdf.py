@@ -204,7 +204,17 @@ pre.output {
 def build(nb_path, bab, judul, out_pdf):
     nb = nbformat.read(nb_path, as_version=4)
     toc_entries, counter, fig_counter = [], {}, [0]
+
+    # Grup "bab + subbab": bungkus h2 + isi pembuka + h3 pertama dalam satu
+    # div.keep agar judul bab tidak pernah terpisah halaman dari subbabnya.
     body_parts = []
+    pending = None  # buffer grup h2 yang sedang dibuka
+
+    def flush_pending():
+        nonlocal pending
+        if pending:
+            body_parts.append('<div class="keep">\n' + "\n".join(pending) + '\n</div>')
+            pending = None
 
     for cell in nb.cells:
         if cell.cell_type == "markdown":
@@ -212,7 +222,20 @@ def build(nb_path, bab, judul, out_pdf):
             if not src:
                 continue
             # sel sel header identitas di bab-01 duplikat dengan cover -> tetap tampilkan, tidak masalah
-            body_parts.append(render_markdown_cell(src, toc_entries, counter))
+            html = render_markdown_cell(src, toc_entries, counter)
+            first = src.split("\n")[0].strip()
+            is_h2 = first.startswith("## ") and not first.startswith("### ")
+            is_h3 = first.startswith("### ")
+            if is_h2:
+                flush_pending()
+                pending = [html]
+            elif is_h3 and pending is not None:
+                pending.append(html)
+                flush_pending()
+            elif pending is not None:
+                pending.append(html)
+            else:
+                body_parts.append(html)
         elif cell.cell_type == "code":
             src = cell.source.strip()
             # lewati magic line %matplotlib inline agar tidak tampil di PDF
@@ -228,7 +251,12 @@ def build(nb_path, bab, judul, out_pdf):
             if out_html:
                 parts.append(out_html)
             parts.append('</div>')
-            body_parts.append("\n".join(parts))
+            cell_html = "\n".join(parts)
+            if pending is not None:
+                pending.append(cell_html)
+            else:
+                body_parts.append(cell_html)
+    flush_pending()
 
     # Daftar isi
     toc_items = []
