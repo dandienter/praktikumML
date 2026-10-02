@@ -12,6 +12,11 @@ Memahami 6 fase CRISP-DM lewat studi kasus nyata dan cara mendiagnosis bias-vari
 - **Latihan 1 - Memetakan proyek nyata ke CRISP-DM:** studi kasus prediksi churn pelanggan telekomunikasi (dataset Telco Customer Churn, 7.043 pelanggan). Eksplorasi data menemukan sinyal bisnis terkuat di `Contract` (month-to-month churn 42,7% vs kontrak 2 tahun 2,8%), lalu tiap temuan dipetakan ke 6 fase CRISP-DM dengan aktivitas konkret.
 - **Latihan 2 - Diagnosis bias-variance:** membandingkan learning curve Decision Tree untuk `max_depth` 1, 4, dan None pada data sintetis. Hasil: `max_depth=1` underfitting (train 0.849, validasi 0.800), `max_depth=4` paling seimbang (train 0.952, validasi 0.866), `max_depth=None` overfitting (train 1.000, validasi 0.858). Dilengkapi 3 grafik learning curve.
 
+## Percobaan Mandiri
+- **PM1 - Split tanpa vs dengan stratify:** proporsi kelas 1 bergeser (train 21,1% vs test 17,0%) tanpa stratify, terjaga (20,3% vs 20,5%) dengan stratify.
+- **PM2 - Decision Tree vs Logistic Regression:** akurasi test 0.865 vs 0.84, pohon menang karena pola datanya non-linear.
+- **PM3 - class_weight="balanced":** F1 kelas minoritas naik dari 0.543 ke 0.569.
+
 ## Sumber Data
 Data sintetis `make_classification` (1000 sampel, 10 fitur, 6 informatif, imbalance kelas 0.8/0.2, `random_state=42`) dibuat langsung di cell Latihan 2; `data/telco-customer-churn.csv` dipakai untuk Latihan 1.
 
