@@ -1,7 +1,7 @@
 # Bab 10: Clustering
 
 ## Tujuan
-Memahami clustering (unsupervised learning) dan menentukan jumlah cluster optimal lewat Elbow Method serta Silhouette Score, lalu membandingkan K-Means, Agglomerative Clustering, dan DBSCAN pada dataset yang sama.
+Memahami clustering (unsupervised learning) dan menentukan jumlah cluster optimal lewat Elbow Method serta Silhouette Score, lalu membandingkan K-Means, Agglomerative Clustering, dan DBSCAN pada dataset yang sama. Dilengkapi tiga Percobaan Mandiri: perbandingan inisialisasi KMeans (random vs k-means++), pengaruh scaling fitur terhadap clustering, dan sensitivitas DBSCAN terhadap parameter eps.
 
 ## Isi
 - `praktikum-bab-10.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)

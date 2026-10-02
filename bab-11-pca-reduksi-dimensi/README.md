@@ -1,7 +1,7 @@
 # Bab 11: PCA dan Reduksi Dimensi
 
 ## Tujuan
-Mengerjakan Latihan Praktikum Modul Bab 11 bagian 11.12: menentukan jumlah komponen PCA optimal lewat variance threshold dan membandingkan visualisasi PCA, t-SNE, dan LDA pada dataset yang sama.
+Mengerjakan Latihan Praktikum Modul Bab 11 bagian 11.12: menentukan jumlah komponen PCA optimal lewat variance threshold dan membandingkan visualisasi PCA, t-SNE, dan LDA pada dataset yang sama. Dilengkapi tiga Percobaan Mandiri: analisis varians PCA lewat scree plot, pengaruh PCA terhadap akurasi dan waktu prediksi KNN, serta perbandingan visualisasi 2D antara fitur mentah dan komponen PCA.
 
 ## Isi
 - `praktikum-bab-11.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
