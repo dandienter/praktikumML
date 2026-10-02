@@ -42,7 +42,7 @@ praktikumML/
 │   ├── praktikum-bab-04.ipynb
 │   ├── praktikum-bab-04.pdf
 │   ├── README.md
-│   └── data/{california_housing.csv, titanic.csv, breast_cancer.csv}
+│   └── data/{titanic.csv, breast_cancer.csv}
 ├── bab-05-decision-tree-pruning/
 │   ├── praktikum-bab-05.ipynb
 │   ├── praktikum-bab-05.pdf
@@ -98,7 +98,7 @@ praktikumML/
 | Iris (150 sampel, 4 fitur, 3 spesies) | `sklearn.datasets.load_iris` (data real Fisher), diekspor ke CSV | Bab 1 |
 | Breast Cancer Wisconsin (569 sampel, 30 fitur) | `sklearn.datasets.load_breast_cancer`, diekspor ke CSV | Bab 2, 4, 5 |
 | Telco Customer Churn (7043 pelanggan) | Kaggle — Telco Customer Churn | Bab 2 (latihan), Bab 3 |
-| California Housing (20640 rumah) | `sklearn.datasets.fetch_california_housing`, diekspor ke CSV | Bab 4 |
+| Dataset sintetis properti (500 baris) | Dibangkitkan di notebook sesuai Modul Bab 4 bagian 4.10 (`np.random.default_rng(42)`) | Bab 4 |
 | Titanic (891 penumpang) | `seaborn.load_dataset('titanic')`, diekspor ke CSV | Bab 4 |
 
 ## Cara Menjalankan
