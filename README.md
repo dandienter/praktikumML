@@ -115,7 +115,7 @@ Klik badge di bawah untuk membuka notebook langsung di Colab (atau unggah file `
 | Bab 4 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb) |
 | Bab 5 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab-05.ipynb) |
 
-> Catatan: di Colab, unggah juga folder `data/` dari bab yang bersangkutan (atau mount Google Drive), karena notebook membaca dataset dari path relatif `data/`.
+> Catatan: setiap notebook diawali **Sel 0 - Persiapan Awal** yang otomatis mengunduh file-file `data/` dari repo ini saat dibuka di Colab, jadi tinggal **Runtime > Run all** dan semuanya langsung jalan (termasuk Latihan Praktikum).
 
 ### Jupyter Lokal
 
