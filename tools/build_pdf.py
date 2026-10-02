@@ -72,13 +72,13 @@ def render_markdown_cell(src, toc_entries, counter):
     return str(soup)
 
 
-PY_FMT = HtmlFormatter(style="default", cssclass="highlight", nowrap=False)
+PY_FMT = HtmlFormatter(style="default", cssclass="highlight", nowrap=False, linenos="inline")
 
 
 def render_code_cell(src, exec_count):
     highlighted = highlight(src, PythonLexer(), PY_FMT)
     label = f"In [{exec_count}]" if exec_count else "Kode"
-    return (f'<div class="codecell"><div class="codehead">{label} — Kode Program</div>'
+    return (f'<div class="codecell"><div class="codehead">{label} - Kode Program</div>'
             f'<div class="codebody">{highlighted}</div></div>')
 
 
@@ -158,13 +158,16 @@ h1, h2, h3 { break-after: avoid; break-inside: avoid; }
 .keep { break-inside: avoid; }
 p { text-align: justify; }
 img { max-width: 100%; height: auto; }
-.codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; overflow: hidden; page-break-inside: avoid; }
-.codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; }
-.codebody { background: #f7f9fb; }
+.codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; break-inside: avoid; page-break-inside: avoid; }
+.codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; border-radius: 1.5mm 1.5mm 0 0; }
+.codebody { background: #f7f9fb; border-radius: 0 0 1.5mm 1.5mm; }
 .codebody pre { margin: 0; padding: 3mm 4mm; font-size: 8.8pt; line-height: 1.45; }
+/* number line pada kode */
+.highlight .linenos { color: #8a94a6; padding-right: 2.5mm; -weasyprint-user-select: none; }
 .output { background: #fffdf5; border: 1px solid #e3d9b8; border-left: 3px solid #d4a017;
           border-radius: 1.5mm; padding: 3mm 4mm; font-family: 'DejaVu Sans Mono', monospace;
-          font-size: 8.6pt; line-height: 1.45; white-space: pre-wrap; word-wrap: break-word; }
+          font-size: 8.6pt; line-height: 1.45; white-space: pre-wrap; word-wrap: break-word;
+          break-inside: avoid; page-break-inside: avoid; }
 .output.error { border-left-color: #c0392b; background: #fdecea; }
 figure.plot { margin: 5mm auto; text-align: center; page-break-inside: avoid; max-width: 100%; }
 figure.plot img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 1.5mm; }
@@ -191,8 +194,8 @@ pre.output {
   white-space: pre-wrap !important;
   overflow-wrap: anywhere !important;
   word-wrap: break-word !important;
-  break-inside: auto !important;
-  page-break-inside: auto !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
 }
 """
 
@@ -217,13 +220,13 @@ def build(nb_path, bab, judul, out_pdf):
             out_html = render_outputs(cell.get("outputs", []), fig_counter)
             if not src and not out_html:
                 continue
-            # kode (.codecell) tetap atomik; output boleh mengalir ke halaman berikut
-            # supaya tidak ada halaman setengah kosong
-            parts = []
+            # bungkus kode + output dalam .keep agar tidak terpisah halaman
+            parts = ['<div class="keep">']
             if src:
                 parts.append(render_code_cell(src, cell.get("execution_count")))
             if out_html:
                 parts.append(out_html)
+            parts.append('</div>')
             body_parts.append("\n".join(parts))
 
     # Daftar isi
