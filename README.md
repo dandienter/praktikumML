@@ -2,7 +2,7 @@
 
 Kumpulan praktikum Machine Learning — 14 bab, dari konsep dasar hingga mini project end-to-end.
 Setiap bab berisi notebook Python (.ipynb) yang sudah dieksekusi lengkap dengan output, penjelasan,
-eksperimen "coba-coba", studi kasus, dan latihan praktikum yang dikerjakan. Dataset disimpan dalam
+percobaan mandiri, studi kasus, dan latihan praktikum yang dikerjakan. Dataset disimpan dalam
 format CSV di tiap folder bab sehingga notebook bisa dijalankan secara offline.
 
 ## Identitas
