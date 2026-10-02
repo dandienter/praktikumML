@@ -143,14 +143,13 @@ body { font-family: 'DejaVu Sans', sans-serif; font-size: 10.5pt; line-height: 1
 .cover .ident td:first-child { color: #9fc2e8; width: 32mm; }
 .cover .tanggal { margin-top: 10mm; color: #9fc2e8; font-size: 11pt; }
 .toc h2, .tools h2 { font-size: 16pt; color: #0f2a4a; border-bottom: 2px solid #0f2a4a; padding-bottom: 2mm; }
+.tools-inline { font-size: 10.5pt; line-height: 1.8; color: #1a1a1a; margin-top: 3mm; }
+.tools-inline b { color: #0f2a4a; }
 .toc ul { list-style: none; padding-left: 0; }
 .toc li.h2 { font-weight: bold; margin-top: 3mm; font-size: 11pt; }
 .toc li.h3 { margin-left: 6mm; font-size: 10pt; }
 .toc a { text-decoration: none; color: #1a1a1a; }
 .toc a::after { content: leader('.') target-counter(attr(href), page); color: #666; }
-.tools table { border-collapse: collapse; margin-top: 4mm; }
-.tools td, .tools th { border: 1px solid #bbb; padding: 2mm 4mm; font-size: 10pt; }
-.tools th { background: #0f2a4a; color: #fff; text-align: left; }
 h2 { font-size: 15pt; color: #0f2a4a; margin-top: 9mm; border-bottom: 1.5px solid #cfd8e3; padding-bottom: 1.5mm; }
 h3 { font-size: 12.5pt; color: #1d4e89; margin-top: 6mm; }
 /* jangan biarkan judul terdampar sendirian di akhir halaman */
@@ -232,11 +231,11 @@ def build(nb_path, bab, judul, out_pdf):
     toc_html = ("<section class='toc'><h2>Daftar Isi</h2><ul>" + "\n".join(toc_items) + "</ul></section>"
                 if toc_items else "")
 
-    # Tools
-    rows = "\n".join(f"<tr><td>{htmlmod.escape(k)}</td><td>{htmlmod.escape(v)}</td></tr>"
-                     for k, v in versi_tools())
+    # Tools (ditulis menyamping/inline, bukan tabel — sesuai permintaan)
+    tools_items = " &nbsp;&bull;&nbsp; ".join(
+        f"<b>{htmlmod.escape(k)}</b> {htmlmod.escape(v)}" for k, v in versi_tools())
     tools_html = ("<section class='tools'><h2>Tools yang Digunakan</h2>"
-                  "<table><tr><th>Perangkat</th><th>Versi</th></tr>" + rows + "</table></section>")
+                  f"<p class='tools-inline'>{tools_items}</p></section>")
 
     # Identitas cover
     ident_rows = "\n".join(
