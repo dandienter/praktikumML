@@ -156,7 +156,8 @@ h3 { font-size: 12.5pt; color: #1d4e89; margin-top: 6mm; }
 h1, h2, h3 { break-after: avoid; break-inside: avoid; }
 /* bungkus kode + outputnya agar tidak terpisah halaman */
 .keep { break-inside: avoid; }
-p { text-align: justify; }
+p { text-align: justify; break-inside: avoid; page-break-inside: avoid; }
+li { break-inside: avoid; page-break-inside: avoid; }
 img { max-width: 100%; height: auto; }
 .codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; break-inside: avoid; page-break-inside: avoid; }
 .codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; border-radius: 1.5mm 1.5mm 0 0; }
