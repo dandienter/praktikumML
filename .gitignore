@@ -1,6 +1,6 @@
 .venv/
 __pycache__/
 .ipynb_checkpoints/
-*.html
 *.pyc
+*.html
 MODUL.md
