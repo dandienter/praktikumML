@@ -1,7 +1,7 @@
 # Bab 6: K-Nearest Neighbors dan Naive Bayes
 
 ## Tujuan
-Membandingkan performa KNN dan Naive Bayes pada dataset yang sama (akurasi, waktu pelatihan, waktu prediksi), serta menerapkan Multinomial Naive Bayes untuk klasifikasi teks sederhana.
+Membandingkan performa KNN dan Naive Bayes pada dataset yang sama (akurasi, waktu pelatihan, waktu prediksi), serta menerapkan Multinomial Naive Bayes untuk klasifikasi teks sederhana. Dilengkapi tiga percobaan mandiri: pengaruh nilai k di KNN (k = 1, 5, 15), perbandingan `weights="uniform"` vs `"distance"`, dan perbandingan GaussianNB vs MultinomialNB di data count sintetis.
 
 ## Isi
 - `praktikum-bab-06.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)

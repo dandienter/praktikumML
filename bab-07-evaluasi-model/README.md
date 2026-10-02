@@ -1,7 +1,7 @@
 # Bab 7: Evaluasi Model Klasifikasi
 
 ## Tujuan
-Menyusun laporan evaluasi model klasifikasi yang komprehensif (confusion matrix, precision/recall/F1, ROC curve, PR curve) serta membandingkan beberapa algoritma secara andal memakai Stratified k-Fold cross-validation.
+Menyusun laporan evaluasi model klasifikasi yang komprehensif (confusion matrix, precision/recall/F1, ROC curve, PR curve) serta membandingkan beberapa algoritma secara andal memakai Stratified k-Fold cross-validation. Dilengkapi tiga percobaan mandiri: single split vs cross-validation, pengaruh `random_state` ke hasil split, dan perbandingan akurasi vs F1 di data imbalance.
 
 ## Isi
 - `praktikum-bab-07.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
