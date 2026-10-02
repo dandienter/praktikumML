@@ -12,6 +12,9 @@ Latihan Praktikum Bab 4: membandingkan tiga pendekatan feature selection (filter
 - **Praktikum 1 - Membandingkan tiga pendekatan feature selection (dataset Breast Cancer):** filter (`SelectKBest` chi-square), wrapper (`RFE` + LogisticRegression), embedded (L1 LogisticRegression via `SelectFromModel`). Masing-masing memilih 10 fitur terbaik; hasilnya dibandingkan dalam satu tabel plus grafik 10 fitur dengan skor chi-square tertinggi.
 - **Praktikum 2 - Membangun pipeline lengkap (dataset Titanic):** `ColumnTransformer` (numerik: median + StandardScaler; kategorikal: most_frequent + OneHotEncoder) + `LogisticRegression`, dievaluasi dengan akurasi di data uji plus confusion matrix.
 
+## Percobaan Mandiri
+Tiga percobaan mandiri di dataset sintetis properti (500 baris, setup datanya ditulis ulang tiap cell): (A) `pipeline.predict` vs preprocessing manual yang benar vs manual yang salah (lupa fitur konstruksi), (B) dengan vs tanpa feature construction `rasio_kamar_per_luas` (R2 sama-sama 0,987), (C) trade-off `n_estimators` 50 vs 200 (R2 sama, 200 pohon 6x lebih lambat).
+
 ## Sumber Data
 - `breast_cancer.csv` - diekspor dari `sklearn.datasets.load_breast_cancer`; dipakai di latihan perbandingan feature selection (modul: "dataset klasifikasi pilihan Anda").
 - `titanic.csv` - diekspor dari `seaborn.load_dataset('titanic')` (891 penumpang); dipakai di latihan pipeline.
