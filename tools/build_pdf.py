@@ -169,7 +169,8 @@ img { max-width: 100%; height: auto; }
 figure.plot { margin: 5mm auto; text-align: center; page-break-inside: avoid; max-width: 100%; }
 figure.plot img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 1.5mm; }
 figure.plot figcaption { font-size: 9pt; color: #555; margin-top: 2mm; font-style: italic; }
-table.df-table, table.md-table { border-collapse: collapse; margin: 3mm 0; font-size: 8pt; width: 100%; }
+table.df-table, table.md-table { border-collapse: collapse; margin: 3mm 0; font-size: 8pt; width: 100%;
+  break-inside: avoid; page-break-inside: avoid; }
 table.md-table { table-layout: fixed; }
 table.df-table { table-layout: auto; }
 table.df-table th, table.df-table td { white-space: nowrap; }
