@@ -1,7 +1,7 @@
 # Bab 8: Support Vector Machine
 
 ## Tujuan
-Memahami cara kerja SVM (margin maksimum, kernel trick, parameter C dan gamma) lewat dua Latihan Praktikum: perbandingan kernel linear/polynomial/RBF dan visualisasi decision boundary.
+Memahami cara kerja SVM (margin maksimum, kernel trick, parameter C dan gamma) lewat dua Latihan Praktikum (perbandingan kernel linear/polynomial/RBF dan visualisasi decision boundary) plus tiga Percobaan Mandiri: pengaruh parameter C (C kecil vs C besar), kernel linear vs RBF di data melingkar, dan pentingnya scaling fitur.
 
 ## Isi
 - `praktikum-bab-08.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)

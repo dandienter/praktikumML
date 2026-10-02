@@ -1,7 +1,7 @@
 # Bab 9: Ensemble Methods
 
 ## Tujuan
-Memahami ide ensemble (bagging vs boosting) lewat Latihan Praktikum Modul Bab 9 bagian 9.12: pengaruh `n_estimators` terhadap OOB score Random Forest dan perbandingan empat model (Decision Tree, Random Forest, AdaBoost, Gradient Boosting) dengan Stratified 5-Fold CV.
+Memahami ide ensemble (bagging vs boosting) lewat Latihan Praktikum Modul Bab 9 bagian 9.12 (pengaruh `n_estimators` terhadap OOB score Random Forest dan perbandingan empat model dengan Stratified 5-Fold CV) plus tiga Percobaan Mandiri: ketahanan ensemble terhadap label noise, pengaruh learning rate di Gradient Boosting, dan hard voting vs soft voting.
 
 ## Isi
 - `praktikum-bab-09.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
