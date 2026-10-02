@@ -21,6 +21,7 @@ scikit-learn) sehingga notebook bisa dijalankan secara offline maupun di Google 
 ```
 praktikumML/
 ├── README.md
+├── GLOSARIUM.md               # glosarium istilah & tools semua bab
 ├── .gitignore
 ├── tools/
 │   └── build_pdf.py              # pembangun PDF bergaya modul (HTML + WeasyPrint)
