@@ -153,7 +153,12 @@ body { font-family: 'DejaVu Sans', sans-serif; font-size: 10.5pt; line-height: 1
 .tools th { background: #0f2a4a; color: #fff; text-align: left; }
 h2 { font-size: 15pt; color: #0f2a4a; margin-top: 9mm; border-bottom: 1.5px solid #cfd8e3; padding-bottom: 1.5mm; }
 h3 { font-size: 12.5pt; color: #1d4e89; margin-top: 6mm; }
+/* jangan biarkan judul terdampar sendirian di akhir halaman */
+h1, h2, h3 { break-after: avoid; break-inside: avoid; }
+/* bungkus kode + outputnya agar tidak terpisah halaman */
+.keep { break-inside: avoid; }
 p { text-align: justify; }
+img { max-width: 100%; height: auto; }
 .codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; overflow: hidden; page-break-inside: avoid; }
 .codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; }
 .codebody { background: #f7f9fb; }
@@ -166,12 +171,28 @@ figure.plot { margin: 5mm auto; text-align: center; page-break-inside: avoid; ma
 figure.plot img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 1.5mm; }
 figure.plot figcaption { font-size: 9pt; color: #555; margin-top: 2mm; font-style: italic; }
 table.df-table, table.md-table { border-collapse: collapse; margin: 3mm 0; font-size: 8pt; width: 100%; }
-table.df-table th, table.df-table td, table.md-table th, table.md-table td { border: 1px solid #bbb; padding: 1.2mm 2mm; text-align: right; }
+table.md-table { table-layout: fixed; }
+table.df-table { table-layout: auto; }
+table.df-table th, table.df-table td { white-space: nowrap; }
+table.df-table th, table.df-table td, table.md-table th, table.md-table td { border: 1px solid #bbb; padding: 1.2mm 2mm; text-align: right;
+  overflow-wrap: break-word; word-break: break-word; }
 table.md-table td:first-child, table.md-table th:first-child { text-align: left; }
 table.df-table thead th, table.md-table thead th { background: #0f2a4a; color: #fff; }
 table.df-table tbody tr:nth-child(even), table.md-table tbody tr:nth-child(even) { background: #f2f5f9; }
 .dfwrap { overflow-x: hidden; }
-""" + PY_FMT.get_style_defs(".highlight")
+""" + PY_FMT.get_style_defs(".highlight") + """
+/* OVERRIDE: pastikan kode panjang WRAP, tidak kepotong samping */
+.codebody pre, .highlight pre, div.highlight pre {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+  word-wrap: break-word !important;
+}
+pre.output {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+  word-wrap: break-word !important;
+}
+"""
 
 
 def build(nb_path, bab, judul, out_pdf):
@@ -194,10 +215,14 @@ def build(nb_path, bab, judul, out_pdf):
             out_html = render_outputs(cell.get("outputs", []), fig_counter)
             if not src and not out_html:
                 continue
+            # bungkus kode + outputnya dalam .keep agar tidak terpisah halaman
+            parts = ['<div class="keep">']
             if src:
-                body_parts.append(render_code_cell(src, cell.get("execution_count")))
+                parts.append(render_code_cell(src, cell.get("execution_count")))
             if out_html:
-                body_parts.append(out_html)
+                parts.append(out_html)
+            parts.append('</div>')
+            body_parts.append("\n".join(parts))
 
     # Daftar isi
     toc_items = []
