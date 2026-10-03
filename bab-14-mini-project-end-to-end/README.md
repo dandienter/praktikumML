@@ -8,6 +8,8 @@ end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sam
 
 > 🚀 **Aplikasi deployment** (web Streamlit + bot Telegram) ada di repo terpisah:
 > **[dandienter/heart-disease-predictor](https://github.com/dandienter/heart-disease-predictor)**
+>
+> 🌐 **Web live:** https://heart-disease-predictor-dandie-46126b49.koyeb.app
 
 ## 📁 Isi Bab
 
@@ -45,7 +47,7 @@ end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sam
 
 | Antarmuka | Repo | Cara pakai |
 |---|---|---|
-| Web (Streamlit) | [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | `streamlit run app.py` → isi 13 fitur → klik Prediksi |
+| Web (Streamlit) | [live di Koyeb](https://heart-disease-predictor-dandie-46126b49.koyeb.app) · [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | isi 13 fitur → klik Prediksi |
 | Bot Telegram | [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | `/start` → jawab 13 pertanyaan → terima hasil |
 
 ## 🔙 Kembali
