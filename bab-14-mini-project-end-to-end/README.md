@@ -6,10 +6,10 @@
 Proyek utama praktikum (Modul Bab 14, bagian 14.16): menyelesaikan proyek Machine Learning
 end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sampai deployment.
 
-> 🚀 **Aplikasi deployment** (web Streamlit + bot Telegram) ada di repo terpisah:
+> 🚀 **Aplikasi deployment** (web Flask + bot Telegram) ada di repo terpisah:
 > **[dandienter/heart-disease-predictor](https://github.com/dandienter/heart-disease-predictor)**
 >
-> 🌐 **Web live:** https://heart-disease-predictor-dandie-46126b49.koyeb.app
+> 🌐 **Web live:** https://hdpredictor.koyeb.app (rencana custom domain: hdpredictor.unindra.web.id)
 
 ## 📁 Isi Bab
 
@@ -31,7 +31,7 @@ end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sam
 6. **Evaluation** — akurasi, precision, recall, F1, ROC-AUC + confusion matrix & kurva ROC
 7. **Pemilihan model** — SVM-RBF (akurasi 86,7% · recall 78,6% · F1 84,6% · ROC-AUC 95,7%),
    dipilih berdasarkan **recall tertinggi** karena false negative berbahaya pada kasus medis
-8. **Deployment** — model disimpan `.pkl`, dipakai web Streamlit & bot Telegram
+8. **Deployment** — model disimpan `.pkl`, dipakai web Flask & bot Telegram
 9. **Percobaan mandiri** — (1) pentingnya scaling per algoritma, (2) model ke-4 Gradient Boosting,
    (3) pengaruh feature engineering
 
@@ -47,7 +47,7 @@ end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sam
 
 | Antarmuka | Repo | Cara pakai |
 |---|---|---|
-| Web (Streamlit) | [live di Koyeb](https://heart-disease-predictor-dandie-46126b49.koyeb.app) · [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | isi 13 fitur → klik Prediksi |
+| Web (Flask) | [live di Koyeb](https://hdpredictor.koyeb.app) · [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | isi 13 fitur → klik Prediksi |
 | Bot Telegram | [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | `/start` → jawab 13 pertanyaan → terima hasil |
 
 ## 🔙 Kembali
