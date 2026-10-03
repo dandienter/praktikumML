@@ -220,7 +220,7 @@ Proyek utama: ML end-to-end mengikuti 6 fase CRISP-DM dengan dataset Heart Disea
 - **Praktikum 3:** Feature engineering — `age_group` + `bp_chol_ratio`
 - **Praktikum 4:** 3 algoritma + GridSearchCV (LogReg, Random Forest, SVM-RBF)
 - **Praktikum 5:** Evaluasi 5 metrik + pemilihan model via **recall** (kasus medis)
-- **Praktikum 6:** Deployment — web Streamlit + bot Telegram ([repo terpisah](https://github.com/dandienter/heart-disease-predictor))
+- **Praktikum 6:** Deployment — web Flask (bukan Streamlit) + bot Telegram ([repo terpisah](https://github.com/dandienter/heart-disease-predictor))
 - **Mandiri:** pentingnya scaling · Gradient Boosting ke-4 · pengaruh feature engineering
 
 **Hasil:** SVM-RBF menang — akurasi 86,7% · recall 78,6% · F1 84,6% · ROC-AUC 95,7%
