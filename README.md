@@ -38,7 +38,7 @@ flowchart LR
     J --> K["<b>Bab 11</b><br/>PCA &<br/>Reduksi Dimensi"]
     K --> L["<b>Bab 12</b><br/>Neural<br/>Networks"]
     L --> M["<b>Bab 13</b><br/>CNN"]
-    M --> N["<b>Bab 14</b><br/>Mini Project<br/>⏳ segera hadir"]
+    M --> N["<b>Bab 14</b><br/>Mini Project<br/>End-to-End ✅"]
 
     style A fill:#0f2a4a,color:#fff
     style G fill:#d4a017,color:#fff
@@ -210,7 +210,23 @@ CNN untuk visi komputer: dari membangun sendiri hingga transfer learning.
 📁 `bab-13-convolutional-neural-networks/`
 </details>
 
-> ⏳ **Bab 14 — Mini Project End-to-End** (komparasi model, tuning, deployment): *segera hadir, masih dalam diskusi.*
+<details>
+<summary><b>Bab 14 — Mini Project End-to-End: Prediksi Penyakit Jantung</b> ✅</summary>
+
+Proyek utama: ML end-to-end mengikuti 6 fase CRISP-DM dengan dataset Heart Disease UCI.
+
+- **Praktikum 1:** EDA — distribusi umur, sebaran target, heatmap korelasi
+- **Praktikum 2:** Data preparation — split stratified + scaling via Pipeline
+- **Praktikum 3:** Feature engineering — `age_group` + `bp_chol_ratio`
+- **Praktikum 4:** 3 algoritma + GridSearchCV (LogReg, Random Forest, SVM-RBF)
+- **Praktikum 5:** Evaluasi 5 metrik + pemilihan model via **recall** (kasus medis)
+- **Praktikum 6:** Deployment — web Streamlit + bot Telegram ([repo terpisah](https://github.com/dandienter/heart-disease-predictor))
+- **Mandiri:** pentingnya scaling · Gradient Boosting ke-4 · pengaruh feature engineering
+
+**Hasil:** SVM-RBF menang — akurasi 86,7% · recall 78,6% · F1 84,6% · ROC-AUC 95,7%
+
+📁 `bab-14-mini-project-end-to-end/`
+</details>
 
 ---
 
@@ -293,6 +309,7 @@ Klik badge bab yang ingin dibuka — notebook langsung terbuka di Colab:
 | Bab 11 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-11-pca-reduksi-dimensi/praktikum-bab-11.ipynb) |
 | Bab 12 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-12-neural-networks/praktikum-bab-12.ipynb) |
 | Bab 13 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-13-convolutional-neural-networks/praktikum-bab-13.ipynb) |
+| Bab 14 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-14-mini-project-end-to-end/praktikum-bab-14.ipynb) |
 
 > 💡 Setiap notebook diawali **Sel 0 — Persiapan Awal** yang otomatis mengunduh file `data/` dari repo ini saat dibuka di Colab. Tinggal **Runtime → Run all**, semuanya langsung jalan.
 
@@ -328,6 +345,7 @@ Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + dafta
 | Bab 11 | [praktikum-bab-11.pdf](bab-11-pca-reduksi-dimensi/praktikum-bab-11.pdf) |
 | Bab 12 | [praktikum-bab-12.pdf](bab-12-neural-networks/praktikum-bab-12.pdf) |
 | Bab 13 | [praktikum-bab-13.pdf](bab-13-convolutional-neural-networks/praktikum-bab-13.pdf) |
+| Bab 14 | [praktikum-bab-14.pdf](bab-14-mini-project-end-to-end/praktikum-bab-14.pdf) |
 
 **Membangun ulang PDF** (butuh WeasyPrint):
 
