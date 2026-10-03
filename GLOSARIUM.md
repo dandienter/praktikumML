@@ -28,6 +28,8 @@ gampang dicari saat baca notebook atau PDF.
 - **Overfitting**: model terlalu menghafal data latih sehingga jelek di data baru.
 - **Underfitting**: model terlalu sederhana sehingga gagal menangkap pola data.
 
+- **Decision boundary**: garis/wilayah pemisah antar kelas yang dipelajari model. Bentuknya menunjukkan kompleksitas model: bergerigi (k kecil, overfitting) vs halus (k besar, underfitting).
+- **n_neighbors (k)**: jumlah tetangga terdekat yang ikut voting di KNN. K kecil sensitif terhadap noise, k besar membuat batas keputusan lebih halus.
 ## Bab 2 - Workflow CRISP-DM dan Bias-Variance
 
 - **CRISP-DM**: kerangka kerja proyek data mining dengan 6 fase: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation, Deployment.
@@ -46,6 +48,7 @@ gampang dicari saat baca notebook atau PDF.
 - **Undersampling**: mengurangi sampel kelas mayoritas secara acak.
 - **class_weight="balanced"**: opsi di scikit-learn yang memberi bobot lebih besar ke kelas minoritas tanpa mengubah data.
 
+- **Isolation Forest**: algoritma deteksi outlier yang mengisolasi titik aneh lewat partisi acak. Parameter `contamination` mengatur perkiraan proporsi outlier di data.
 ## Bab 4 - Feature Engineering dan Pipeline
 
 - **Feature construction**: membuat fitur baru dari fitur mentah agar pola lebih mudah dilihat model (misal rasio, binning).
@@ -73,6 +76,8 @@ gampang dicari saat baca notebook atau PDF.
 - **MultinomialNB**: varian Naive Bayes untuk data hitungan/frekuensi, cocok untuk klasifikasi teks.
 - **Scaling**: standardisasi fitur (misal StandardScaler) supaya KNN tidak didominasi fitur bernilai besar, karena KNN bekerja dengan jarak.
 
+- **Vektorisasi teks (CountVectorizer)**: mengubah dokumen teks menjadi vektor hitungan kata supaya bisa diproses model.
+- **weights (uniform vs distance)**: di KNN, `uniform` memberi bobot sama ke semua tetangga, sedangkan `distance` memberi bobot lebih besar ke tetangga yang lebih dekat.
 ## Bab 7 - Evaluasi Model Klasifikasi
 
 - **Confusion matrix**: tabel 2x2 berisi True Positive (TP), True Negative (TN), False Positive (FP), False Negative (FN).
@@ -82,6 +87,8 @@ gampang dicari saat baca notebook atau PDF.
 - **ROC curve dan AUC**: kurva True Positive Rate vs False Positive Rate di berbagai threshold. AUC 1 berarti sempurna.
 - **Stratified k-fold CV**: validasi silang yang tiap lipatannya menjaga proporsi kelas seperti data aslinya, lebih adil dari sekali split.
 
+- **PR curve (Precision-Recall curve)**: kurva precision vs recall di berbagai threshold. Lebih informatif daripada ROC-AUC saat data tidak seimbang.
+- **Threshold**: batas nilai probabilitas untuk memutuskan prediksi positif. Menggeser threshold menukar precision dengan recall.
 ## Bab 8 - Support Vector Machine
 
 - **SVM**: classifier yang mencari hyperplane (garis pemisah) dengan margin selebar mungkin.
@@ -100,6 +107,8 @@ gampang dicari saat baca notebook atau PDF.
 - **n_estimators**: jumlah pohon dalam ensemble, makin banyak biasanya makin stabil.
 - **OOB score (Out-of-Bag)**: skor validasi gratis dari sampel yang tidak terpakai di tiap bootstrap, tanpa perlu data validasi terpisah.
 
+- **Hard voting vs soft voting**: hard voting menggabungkan label hasil voting terbanyak tiap model, soft voting merata-ratakan probabilitas prediksi tiap model (biasanya lebih baik).
+- **Learning rate**: seberapa besar langkah perbaikan tiap iterasi boosting. Kecil = belajar pelan tapi stabil, besar = cepat tapi bisa kelewatan optimum.
 ## Bab 10 - Clustering
 
 - **Clustering**: unsupervised learning untuk mencari kelompok-kelompok alami di dalam data.
@@ -109,6 +118,9 @@ gampang dicari saat baca notebook atau PDF.
 - **Hierarchical clustering**: membangun cluster dari bawah ke atas dengan menggabungkan titik yang paling mirip (agglomerative).
 - **DBSCAN**: clustering berbasis kepadatan yang bisa menemukan cluster bentuk tak beraturan dan menandai titik aneh sebagai noise.
 
+- **k-means++**: cara inisialisasi centroid K-Means yang menyebar, jauh lebih stabil dan cepat konvergen daripada inisialisasi acak.
+- **Inersia (inertia)**: jumlah jarak kuadrat tiap titik ke centroid clusternya. Dipakai di elbow method: pilih k di titik siku saat penurunan inersia melambat.
+- **eps / min_samples**: dua parameter DBSCAN. `eps` adalah radius tetangga, `min_samples` jumlah minimum titik untuk membentuk cluster padat. Titik yang tidak masuk cluster mana pun ditandai sebagai noise.
 ## Bab 11 - PCA dan Reduksi Dimensi
 
 - **Curse of dimensionality**: masalah yang muncul saat fitur terlalu banyak, data jadi jarang tersebar dan komputasi berat.
@@ -117,6 +129,7 @@ gampang dicari saat baca notebook atau PDF.
 - **t-SNE**: teknik reduksi dimensi non-linear untuk visualisasi, bagus melihat pengelompokan data tapi hasilnya stokastik.
 - **LDA (Linear Discriminant Analysis)**: reduksi dimensi yang memakai label kelas supaya jarak antar kelas maksimal.
 
+- **Scree plot**: grafik batang/garis varians tiap komponen PCA dari besar ke kecil. Jumlah komponen dipilih di titik siku atau sampai varians kumulatif mencapai target (misal 95%).
 ## Bab 12 - Neural Networks
 
 - **Perceptron / MLP**: perceptron adalah unit neuron tunggal, sedangkan MLP (Multi-Layer Perceptron) menumpuk banyak neuron dalam beberapa hidden layer.
@@ -127,6 +140,9 @@ gampang dicari saat baca notebook atau PDF.
 - **Optimizer dan loss**: optimizer (misal adam) mengatur cara bobot diperbarui, loss (misal sparse_categorical_crossentropy) mengukur seberapa salah prediksi.
 - **Early stopping**: menghentikan pelatihan otomatis ketika val_loss berhenti membaik selama beberapa epoch (patience), supaya model tidak overfitting.
 
+- **Softmax**: fungsi aktivasi di layer output untuk klasifikasi multi-kelas, mengubah skor menjadi probabilitas yang jumlahnya 1.
+- **Learning rate**: ukuran langkah update bobot tiap iterasi. Terlalu besar bikin training tidak stabil, terlalu kecil bikin training lama.
+- **val_loss**: nilai loss di data validasi. Dipantau untuk early stopping: training dihentikan saat val_loss berhenti membaik.
 ## Bab 13 - Convolutional Neural Networks
 
 - **Konvolusi / filter**: operasi menggeser filter kecil ke seluruh citra untuk mendeteksi pola lokal seperti tepi dan tekstur.
@@ -134,3 +150,6 @@ gampang dicari saat baca notebook atau PDF.
 - **Transfer learning**: memakai ulang bobot model yang sudah dilatih di dataset besar (misal ImageNet) lalu melatih classifier kecil di atasnya.
 - **MobileNetV2**: arsitektur CNN ringan yang dipakai sebagai ekstraktor fitur di praktikum transfer learning.
 - **CIFAR-10**: dataset 60.000 citra berwarna 32x32 dalam 10 kelas, dipakai sebagai subset kecil di praktikum.
+
+- **Data augmentation**: memperbanyak variasi data latih lewat transformasi acak (rotasi, flip, geser, zoom) supaya model lebih tahan terhadap variasi input.
+- **Dropout**: teknik regularisasi yang mematikan neuron secara acak saat training, memaksa jaringan tidak bergantung pada neuron tertentu. Dropout 0,5 artinya setengah neuron dimatikan tiap iterasi.

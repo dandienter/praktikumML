@@ -52,7 +52,7 @@ flowchart LR
 
 ## 📚 Daftar Bab
 
-Setiap bab berisi tiga hal: **`praktikum-bab-NN.ipynb`** (notebook siap jalan) · **`praktikum-bab-NN.pdf`** (modul siap cetak) · **`README.md`** (panduan bab). Klik untuk melihat eksperimen di tiap bab 👇
+Setiap bab berisi tiga hal: **`praktikum-bab-NN.ipynb`** (notebook siap jalan) · **`praktikum-bab-NN.pdf`** (modul PDF) · **`README.md`** (panduan bab). Klik untuk melihat eksperimen di tiap bab 👇
 
 <details>
 <summary><b>Bab 1 — Konsep Dasar Machine Learning</b> <code>Iris + KNN</code></summary>
@@ -311,7 +311,7 @@ jupyter notebook
 
 ## 📄 Modul PDF
 
-Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + daftar isi + kode + output + visualisasi), siap cetak atau dibaca offline:
+Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + daftar isi + kode + output + visualisasi), dibaca offline:
 
 | Bab | PDF |
 |-----|-----|
@@ -343,7 +343,7 @@ Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + dafta
 Istilah-istilah dan tools dari seluruh bab dirangkum ringkas di satu dokumen:
 
 - [GLOSARIUM.md](GLOSARIUM.md) — versi markdown
-- [GLOSARIUM.pdf](GLOSARIUM.pdf) — versi PDF siap cetak
+- [GLOSARIUM.pdf](GLOSARIUM.pdf) — versi PDF
 
 ---
 
