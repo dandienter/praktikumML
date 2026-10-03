@@ -45,10 +45,25 @@ end-to-end mengikuti seluruh tahapan **CRISP-DM** — dari pemilihan dataset sam
 
 ## 🌐 Deployment
 
+> **Catatan:** aplikasi web ini **bukan Streamlit**, melainkan web Flask custom
+> dengan desain ala situs kesehatan (tanpa emot), mobile-first, dan berbahasa Indonesia.
+
 | Antarmuka | Repo | Cara pakai |
 |---|---|---|
-| Web (Flask) | [live di Koyeb](https://hdpredictor.koyeb.app) · [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | isi 13 fitur → klik Prediksi |
-| Bot Telegram | [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | `/start` → jawab 13 pertanyaan → terima hasil |
+| Web (Flask) | [live di Koyeb](https://hdpredictor.koyeb.app) · [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | buka web → baca Cara Pakai & Data → isi 13 fitur → klik Prediksi Sekarang → baca hasil |
+| Bot Telegram ([@hdpredictor_bot](https://t.me/hdpredictor_bot)) | [`heart-disease-predictor`](https://github.com/dandienter/heart-disease-predictor) | `/start` → jawab 13 pertanyaan via tombol (umur dkk. boleh diketik) → terima hasil |
+
+### Cara menggunakan aplikasi web
+1. Buka https://hdpredictor.koyeb.app.
+2. Baca bagian **Cara Pakai** (4 langkah) dan **Data** (info dataset UCI Cleveland).
+3. Isi formulir **Cek Risiko Anda** dengan 13 indikator klinis (Data Diri, Pemeriksaan Jantung, Hasil Lab).
+4. Klik **Prediksi Sekarang** — hasil muncul sebagai Risiko Tinggi/Rendah + persentase probabilitas.
+5. Hasil hanya untuk edukasi, bukan diagnosis medis.
+
+### Cara menggunakan bot Telegram
+1. Buka [@hdpredictor_bot](https://t.me/hdpredictor_bot), kirim `/start`.
+2. Jawab 13 pertanyaan cukup dengan menekan tombol; untuk umur/tekanan darah/kolesterol/detak jantung/oldpeak boleh juga mengetik angka sendiri bila tidak ada di tombol.
+3. Terima hasil prediksi + probabilitas. Kirim `/batal` untuk berhenti kapan saja.
 
 ## 🔙 Kembali
 
