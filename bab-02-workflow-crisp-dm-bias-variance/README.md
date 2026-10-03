@@ -1,11 +1,17 @@
 # Bab 2: Workflow Machine Learning, CRISP-DM, dan Diagnosis Bias-Variance
+<p>
+  <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-02-workflow-crisp-dm-bias-variance/praktikum-bab-02.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  <a href="praktikum-bab-02.pdf">📄 Modul PDF</a>
+</p>
 
 ## Tujuan
 Memahami 6 fase CRISP-DM lewat studi kasus nyata dan cara mendiagnosis bias-variance lewat learning curve (data sintetis + Decision Tree).
 
 ## Isi
 - `praktikum-bab-02.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `[praktikum-bab-02.pdf](praktikum-bab-02.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
 
 ## Latihan Praktikum
@@ -24,3 +30,6 @@ Data sintetis `make_classification` (1000 sampel, 10 fitur, 6 informatif, imbala
 1. Buka `praktikum-bab-02.ipynb` di Google Colab (unggah file + folder `data/`) atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All).
 3. Dataset dibaca dari folder `data/` - tidak perlu mengunduh apa pun.
+
+---
+<sub>← <a href="../README.md">Kembali ke daftar bab</a></sub>

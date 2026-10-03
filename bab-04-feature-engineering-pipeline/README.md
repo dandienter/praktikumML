@@ -1,11 +1,17 @@
 # Bab 4: Feature Engineering: Konstruksi, Seleksi Fitur, dan Pipeline Scikit-Learn
+<p>
+  <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  <a href="praktikum-bab-04.pdf">📄 Modul PDF</a>
+</p>
 
 ## Tujuan
 Latihan Praktikum Bab 4: membandingkan tiga pendekatan feature selection (filter, wrapper, embedded) dan membangun pipeline lengkap dengan ColumnTransformer (dataset Breast Cancer + Titanic).
 
 ## Isi
 - `praktikum-bab-04.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `[praktikum-bab-04.pdf](praktikum-bab-04.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
 
 ## Latihan Praktikum
@@ -22,3 +28,6 @@ Tiga percobaan mandiri di dataset sintetis properti (500 baris, setup datanya di
 ## Cara Menjalankan
 1. Buka `praktikum-bab-04.ipynb` di Google Colab (klik badge di README utama) atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All). **Sel 0** otomatis mengunduh file `data/` yang dibutuhkan dari GitHub saat dibuka di Colab.
+
+---
+<sub>← <a href="../README.md">Kembali ke daftar bab</a></sub>

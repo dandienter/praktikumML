@@ -172,13 +172,14 @@ h2 { font-size: 15pt; color: #0f2a4a; margin-top: 9mm; border-bottom: 1.5px soli
 h3 { font-size: 12.5pt; color: #1d4e89; margin-top: 6mm; }
 /* jangan biarkan judul terdampar sendirian di akhir halaman */
 h1, h2, h3 { break-after: avoid; break-inside: avoid; }
-/* bungkus kode + outputnya agar tidak terpisah halaman */
-.keep { break-inside: avoid; }
-p { text-align: justify; break-inside: avoid; page-break-inside: avoid; }
+/* .keep: pembungkus semantik heading+konten. SENGAJA boleh pecah halaman
+   agar tidak ada gap kosong besar; judul tetap dijaga oleh break-after di h2/h3. */
+.keep { break-inside: auto; }
+p { text-align: justify; orphans: 3; widows: 3; }
 li { break-inside: avoid; page-break-inside: avoid; }
 img { max-width: 100%; height: auto; }
-.codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; break-inside: avoid; page-break-inside: avoid; }
-.codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; border-radius: 1.5mm 1.5mm 0 0; }
+.codecell { margin: 4mm 0; border: 1px solid #d5dbe3; border-radius: 2mm; break-inside: auto; }
+.codehead { background: #0f2a4a; color: #fff; font-size: 8.5pt; padding: 1.8mm 4mm; font-family: 'DejaVu Sans Mono', monospace; border-radius: 1.5mm 1.5mm 0 0; break-after: avoid; break-inside: avoid; }
 .codebody { background: #f7f9fb; border-radius: 0 0 1.5mm 1.5mm; }
 .codebody pre { margin: 0; padding: 3mm 4mm; font-size: 8.8pt; line-height: 1.45; }
 /* number line pada kode */
@@ -186,13 +187,15 @@ img { max-width: 100%; height: auto; }
 .output { background: #fffdf5; border: 1px solid #e3d9b8; border-left: 3px solid #d4a017;
           border-radius: 1.5mm; padding: 3mm 4mm; font-family: 'DejaVu Sans Mono', monospace;
           font-size: 8.6pt; line-height: 1.45; white-space: pre-wrap; word-wrap: break-word;
-          break-inside: avoid; page-break-inside: avoid; }
+          break-inside: auto; }
 .output.error { border-left-color: #c0392b; background: #fdecea; }
-figure.plot { margin: 5mm auto; text-align: center; page-break-inside: avoid; max-width: 100%; }
-figure.plot img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 1.5mm; }
+figure.plot { margin: 5mm auto; text-align: center; break-inside: avoid; page-break-inside: avoid; max-width: 100%; }
+figure.plot img { max-width: 100%; max-height: 192mm; height: auto; border: 1px solid #ddd; border-radius: 1.5mm; }
 figure.plot figcaption { font-size: 9pt; color: #555; margin-top: 2mm; font-style: italic; }
 table.df-table, table.md-table { border-collapse: collapse; margin: 3mm 0; font-size: 8pt; width: 100%;
-  break-inside: avoid; page-break-inside: avoid; }
+  break-inside: auto; }
+table.df-table thead, table.md-table thead { break-inside: avoid; }
+table.df-table tr, table.md-table tr { break-inside: avoid; }
 table.md-table { table-layout: fixed; }
 table.df-table { table-layout: auto; }
 table.df-table th, table.df-table td { white-space: nowrap; }
@@ -213,8 +216,7 @@ pre.output {
   white-space: pre-wrap !important;
   overflow-wrap: anywhere !important;
   word-wrap: break-word !important;
-  break-inside: avoid !important;
-  page-break-inside: avoid !important;
+  break-inside: auto !important;
 }
 """
 

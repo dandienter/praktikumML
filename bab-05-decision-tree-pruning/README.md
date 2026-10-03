@@ -1,11 +1,17 @@
 # Bab 5: Decision Tree dan Teknik Pruning
+<p>
+  <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab-05.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  <a href="praktikum-bab-05.pdf">📄 Modul PDF</a>
+</p>
 
 ## Tujuan
 Memahami teknik pruning untuk mengatasi overfitting pada decision tree lewat Latihan Praktikum: pre-pruning (grid manual `max_depth` x `min_samples_leaf`) dan post-pruning (cost complexity pruning path).
 
 ## Isi
 - `praktikum-bab-05.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `[praktikum-bab-05.pdf](praktikum-bab-05.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 
 ## Latihan Praktikum
 1. **Latihan 1 - Grid manual pre-pruning.** Grid search manual atas 12 kombinasi `max_depth` {2, 4, 6, None} x `min_samples_leaf` {1, 5, 10} pada Breast Cancer. Hasil terbaik: akurasi test 0,9474 (`max_depth=4`, `min_samples_leaf=10`). Dilengkapi heatmap akurasi per kombinasi.
@@ -21,3 +27,6 @@ Tiga percobaan mandiri di dataset Breast Cancer (setup datanya ditulis ulang tia
 1. Buka `praktikum-bab-05.ipynb` di Google Colab atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All).
 3. Dataset dimuat langsung dari `sklearn.datasets` - tidak perlu mengunduh apa pun.
+
+---
+<sub>← <a href="../README.md">Kembali ke daftar bab</a></sub>

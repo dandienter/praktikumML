@@ -1,11 +1,17 @@
 # Bab 3 - Data Preparation Lanjutan: Missing Values dan Imbalanced Data
+<p>
+  <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-03-data-preparation/praktikum-bab-03.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  <a href="praktikum-bab-03.pdf">📄 Modul PDF</a>
+</p>
 
 ## Tujuan
 Mengerjakan **Latihan Praktikum Modul Bab 3 bagian 3.10**: membandingkan strategi imputasi missing value (mean vs KNN Imputer) dan mengukur efektivitas penanganan data tidak seimbang (baseline, SMOTE, undersampling, class_weight) dengan metrik F1-score.
 
 ## Isi
 - `praktikum-bab-03.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `[praktikum-bab-03.pdf](praktikum-bab-03.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 
 ## Latihan yang Dikerjakan
 - **Latihan 1 (modul 3.10):** mean imputation vs KNN Imputer (k=5) pada data sintetis, masing-masing dilatih Logistic Regression dan dibandingkan skor F1. Hasil: KNN Imputer F1 0,308 sedikit mengungguli mean imputation F1 0,296.
@@ -23,3 +29,6 @@ Data sintetis dari `sklearn.datasets.make_classification` (n=2000, 8 fitur, rasi
 1. Buka `praktikum-bab-03.ipynb` di Google Colab atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All).
 3. Tidak ada dataset yang perlu diunduh; cell Sel 0 memasang `imbalanced-learn` otomatis kalau belum ada (khusus Colab).
+
+---
+<sub>← <a href="../README.md">Kembali ke daftar bab</a></sub>

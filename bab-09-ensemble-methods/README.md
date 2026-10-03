@@ -1,11 +1,17 @@
 # Bab 9: Ensemble Methods
+<p>
+  <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-09-ensemble-methods/praktikum-bab-09.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  <a href="praktikum-bab-09.pdf">📄 Modul PDF</a>
+</p>
 
 ## Tujuan
 Memahami ide ensemble (bagging vs boosting) lewat Latihan Praktikum Modul Bab 9 bagian 9.12 (pengaruh `n_estimators` terhadap OOB score Random Forest dan perbandingan empat model dengan Stratified 5-Fold CV) plus tiga Percobaan Mandiri: ketahanan ensemble terhadap label noise, pengaruh learning rate di Gradient Boosting, dan hard voting vs soft voting.
 
 ## Isi
 - `praktikum-bab-09.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `praktikum-bab-*.pdf` - versi PDF bergaya modul
+- `[praktikum-bab-09.pdf](praktikum-bab-09.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `grafik-n-estimators.png`, `grafik-banding-model.png` - grafik hasil praktikum
 
 ## Sumber Data
@@ -15,3 +21,6 @@ Memahami ide ensemble (bagging vs boosting) lewat Latihan Praktikum Modul Bab 9 
 1. Buka `praktikum-bab-09.ipynb` di Google Colab atau Jupyter Notebook lokal.
 2. Jalankan cell berurutan dari atas ke bawah (Run All).
 3. Dataset dimuat langsung dari `sklearn.datasets.load_breast_cancer` - tidak perlu mengunduh apa pun.
+
+---
+<sub>← <a href="../README.md">Kembali ke daftar bab</a></sub>
