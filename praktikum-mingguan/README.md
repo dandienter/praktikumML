@@ -46,4 +46,5 @@ File `latihan-5-1-pre-pruning.ipynb` adalah notebook khusus Latihan 1 (bagian 5.
 ## Dokumen
 
 - [Presentasi_Bab5_Decision_Tree_Pruning.pdf](Presentasi_Bab5_Decision_Tree_Pruning.pdf), slide presentasi Bab 5 (11 slide, 16:9).
+- [Naskah_Presentasi_Bab5.pdf](Naskah_Presentasi_Bab5.pdf), naskah omongan per slide (estimasi 8-10 menit).
 - [Modul_Bab5_511_Implementasi_Python.pdf](Modul_Bab5_511_Implementasi_Python.pdf), modul lengkap Bab 5.11 (Praktikum 5.1–5.6 + interpretasi).
