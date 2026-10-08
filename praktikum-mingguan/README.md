@@ -46,4 +46,4 @@ File `latihan-5-1-pre-pruning.py` adalah ekstrak khusus Latihan 1 (bagian 5.1) B
 
 - [Modul_Bab5_511_Implementasi_Python.pdf](Modul_Bab5_511_Implementasi_Python.pdf), modul lengkap Bab 5.11 (Praktikum 5.1–5.6 + interpretasi).
 
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab5-511.ipynb) **praktikum-bab5-511.ipynb** (di folder bab-05), notebook Colab sesuai kode modul Bab 5.11 (5.1–5.6), penjelasan detail siap presentasi.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/praktikum-mingguan/praktikum-bab5-511.ipynb) **praktikum-bab5-511.ipynb**, notebook Colab sesuai kode modul Bab 5.11 (5.1–5.6), penjelasan detail siap presentasi.
