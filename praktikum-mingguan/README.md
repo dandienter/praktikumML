@@ -45,6 +45,6 @@ File `latihan-5-1-pre-pruning.ipynb` adalah notebook khusus Latihan 1 (bagian 5.
 
 ## Dokumen
 
-- [Presentasi_Bab5_Decision_Tree_Pruning.pdf](Presentasi_Bab5_Decision_Tree_Pruning.pdf), slide presentasi Bab 5 (13 slide, 16:9, mencakup 5.11 dan 5.12).
-- [Naskah_Presentasi_Bab5.pdf](Naskah_Presentasi_Bab5.pdf), naskah omongan per slide (estimasi 10-12 menit).
+- [Presentasi_Bab5_Decision_Tree_Pruning.pdf](Presentasi_Bab5_Decision_Tree_Pruning.pdf), slide presentasi Bab 5 (14 slide, 16:9, kode 5.11 lengkap sesuai Colab + 5.12).
+- [Naskah_Presentasi_Bab5.pdf](Naskah_Presentasi_Bab5.pdf), naskah omongan per slide (estimasi 12-15 menit).
 - [Modul_Bab5_Implementasi_Python.pdf](Modul_Bab5_Implementasi_Python.pdf), modul lengkap Bab 5.11 (Praktikum 5.1-5.6 + interpretasi) dan 5.12 (Latihan Praktikum: grid search pre-pruning, CCP path).
