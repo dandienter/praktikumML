@@ -41,3 +41,7 @@ File `latihan-5-1-pre-pruning.py` adalah ekstrak khusus Latihan 1 (bagian 5.1) B
 | Bab 12 — Neural Networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-12-neural-networks/praktikum-bab-12.ipynb) |
 | Bab 13 — Convolutional Neural Networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-13-convolutional-neural-networks/praktikum-bab-13.ipynb) |
 | Bab 14 — Mini Project End-to-End | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-14-mini-project-end-to-end/praktikum-bab-14.ipynb) |
+
+## Dokumen
+
+- [Modul_Bab5_511_Implementasi_Python.pdf](Modul_Bab5_511_Implementasi_Python.pdf) — modul lengkap Bab 5.11 (Praktikum 5.1–5.6 + interpretasi).
