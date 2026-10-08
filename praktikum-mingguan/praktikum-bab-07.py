@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 07: Evaluasi Model
+# Praktikum Bab 07: Evaluasi Model (mulai dari Implementasi Python)
 # Diekstrak dari bab-07-evaluasi-model/praktikum-bab-07.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Kalau notebook ini dibuka di Google Colab lewat link GitHub, jalankan sel di bawah ini dulu (atau langsung **Runtime > Run all**). Sel ini cuma memastikan semua paket yang dibutuhkan sudah tersedia. Bab ini tidak butuh file data apa pun karena dataset Breast Cancer dimuat langsung dari scikit-learn, jadi kalau dijalankan di laptop pun sel ini tidak mengubah apa-apa.
-
-# Praktikum Machine Learning: Bab 7
-# Evaluasi Model Klasifikasi
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 7 ini mengerjakan **Latihan Praktikum Modul Bab 7 bagian 7.13**, memakai dataset **Breast Cancer** dari `sklearn.datasets.load_breast_cancer`. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Confusion matrix.** Tabel 2x2 yang merangkum hasil prediksi model: True Positive (TP), True Negative (TN), False Positive (FP), dan False Negative (FN). Semua metrik klasifikasi diturunkan dari empat angka ini.
-# - **Precision, recall, F1.** Precision = TP/(TP+FP), artinya seberapa tepat prediksi positif model. Recall = TP/(TP+FN), artinya seberapa banyak kasus positif yang berhasil ditangkap. F1 adalah rata-rata harmonik keduanya, enak dipakai sebagai satu angka ringkasan.
-# - **ROC curve dan AUC.** ROC memplot True Positive Rate melawan False Positive Rate di berbagai threshold. AUC (luas area di bawah kurva) makin dekat ke 1 berarti model makin bagus memisahkan kedua kelas.
-# - **PR curve.** Memplot precision melawan recall. Kurva ini lebih informatif daripada ROC kalau datanya imbalance, karena fokusnya ke kelas positif.
-# - **Cross-validation dan stratified k-fold.** Data dibagi jadi k lipatan, tiap lipatan gantian jadi data uji. Versi stratified menjaga proporsi kelas di tiap lipatan tetap sama seperti data aslinya, jadi hasil evaluasinya lebih andal daripada sekali split biasa.
-
-# 7.13 Latihan Praktikum (Modul Bab 7)
-#
-# Di bagian ini saya ngerjain dua latihan praktikum dari Modul Machine Learning Bab 7 bagian 7.13, semuanya memakai dataset Breast Cancer.
 
 # Praktikum 1 - Laporan Evaluasi Lengkap
 #

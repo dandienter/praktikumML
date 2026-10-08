@@ -1,30 +1,7 @@
 # ============================================================
-# Praktikum Bab 03: Data Preparation
+# Praktikum Bab 03: Data Preparation (mulai dari Implementasi Python)
 # Diekstrak dari bab-03-data-preparation/praktikum-bab-03.ipynb
 # ============================================================
-
-# Praktikum Machine Learning: Bab 3
-# Data Preparation Lanjutan: Missing Values, Outlier, dan Imbalanced Data
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Notebook ini hanya berisi **Latihan Praktikum Modul Bab 3 bagian 3.10**, memakai **data sintetis** dari `sklearn.datasets.make_classification` (n=2000, 8 fitur, rasio kelas 0.95/0.05) dengan **simulasi missing value 5%**. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Missing value.** Data yang hilang terjadi karena berbagai sebab. Penanganannya ada tiga jalur: hapus baris yang bermasalah, imputasi statistik sederhana (mean/median), atau imputasi berbasis model seperti **KNN Imputer** yang menebak nilai kosong dari k tetangga terdekat sehingga pola antar-fitur tetap terjaga.
-# - **Outlier.** Data yang menyimpang jauh dari pola umum dan bisa merusak model. **Isolation Forest** mendeteksinya dengan cara "mengisolasi" titik-titik aneh lewat pohon acak; parameter `contamination` adalah tebakan kita soal proporsi outlier di data.
-# - **Imbalanced data.** Kelas minoritas jauh lebih sedikit dari kelas mayoritas. Di sini **akurasi menipu**, karena model bisa dapat akurasi tinggi hanya dengan selalu menebak kelas mayoritas. Penanganannya: **SMOTE** (oversampling: membuat sampel sintetis kelas minoritas), undersampling acak, atau `class_weight="balanced"`.
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Kalau notebook ini dibuka di Google Colab, jalankan cell ini dulu supaya `imbalanced-learn` (paket SMOTE) tersedia. Kalau dibuka di Jupyter lokal yang paketnya sudah terpasang, cell ini tidak mengubah apa-apa.
 
 # Latihan Praktikum (Modul Bab 3, bagian 3.10)
 #

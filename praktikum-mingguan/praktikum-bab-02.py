@@ -1,5 +1,5 @@
 # ============================================================
-# Praktikum Bab 02: Workflow Crisp Dm Bias Variance
+# Praktikum Bab 02: Workflow Crisp Dm Bias Variance (mulai dari Implementasi Python)
 # Diekstrak dari bab-02-workflow-crisp-dm-bias-variance/praktikum-bab-02.ipynb
 # ============================================================
 

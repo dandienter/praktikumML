@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 08: Support Vector Machine
+# Praktikum Bab 08: Support Vector Machine (mulai dari Implementasi Python)
 # Diekstrak dari bab-08-support-vector-machine/praktikum-bab-08.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Kalau notebook ini dibuka di Google Colab, jalankan cell di bawah ini dulu untuk memastikan semua paket yang dipakai sudah tersedia. Kalau dijalankan di Jupyter lokal, cell ini tidak mengubah apa-apa.
-
-# Praktikum Machine Learning: Bab 8
-# Support Vector Machine
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 8 ini mengerjakan **Latihan Praktikum Modul Bab 8 bagian 8.11**, memakai dataset **Breast Cancer** dari `sklearn.datasets.load_breast_cancer`. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Margin maksimum dan support vector:** SVM mencari hyperplane (garis pemisah) yang memisahkan dua kelas dengan jarak sejauh mungkin. Titik-titik data terdekat yang menentukan posisi garis itu disebut support vector.
-# - **Kernel trick:** trik untuk menangani data yang tidak bisa dipisah garis lurus, datanya dipetakan ke ruang berdimensi lebih tinggi. Kernel yang umum dipakai: linear, polynomial, dan RBF.
-# - **Parameter C:** mengatur trade-off antara margin yang lebar dan kesalahan klasifikasi. C kecil mentolerir beberapa salah klasifikasi demi margin lebar, C besar memaksa model mengikuti data training.
-# - **Parameter gamma:** mengatur seberapa jauh pengaruh satu titik training. Gamma kecil membuat pengaruhnya melebar (boundary halus), gamma besar membuat pengaruhnya sempit (boundary berlekuk).
-# - **Scaling wajib:** SVM sensitif terhadap skala fitur karena dia menghitung jarak, jadi fitur harus distandarisasi dulu (misalnya pakai StandardScaler) sebelum training.
-
-# 8.11 Latihan Praktikum (Modul Bab 8)
-#
-# Di bagian ini saya mengerjakan dua Latihan Praktikum dari modul Bab 8 bagian 8.11, yaitu perbandingan kernel SVM dan visualisasi decision boundary.
 
 # Praktikum 1 - Perbandingan Kernel
 #

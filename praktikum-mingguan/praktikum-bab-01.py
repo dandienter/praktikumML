@@ -1,30 +1,7 @@
 # ============================================================
-# Praktikum Bab 01: Konsep Dasar Machine Learning
+# Praktikum Bab 01: Konsep Dasar Machine Learning (mulai dari Implementasi Python)
 # Diekstrak dari bab-01-konsep-dasar-machine-learning/praktikum-bab-01.ipynb
 # ============================================================
-
-# Praktikum Machine Learning: Bab 1
-# Konsep Dasar Machine Learning
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# *notebook ini saya kerjain di Google Colab.*
-
-# Ringkasan Konsep
-#
-# * **Definisi (Mitchell):** program komputer disebut *belajar* dari pengalaman **E** untuk tugas **T** dengan ukuran performa **P**, bila performanya di **T** yang diukur dengan **P** membaik seiring bertambahnya **E**.
-# * **Supervised learning:** belajar dari data berlabel, contohnya klasifikasi (dataset Iris) dan regresi.
-# * **Alur ML dasar:** data dimuat, dibagi menjadi train/test, model dilatih, lalu dievaluasi. Itu alur yang saya jalankan di bab ini memakai KNN.
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Dataset Iris di bab ini dimuat langsung dari `sklearn.datasets.load_iris`, jadi tidak ada file yang perlu diunduh. Sel kode di bawah sengaja kosong sebagai penanda persiapan awal.
 
 # Praktikum 1.1 - Persiapan Library (Modul Bab 1, bagian 1.10)
 #

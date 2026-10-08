@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 11: Pca Reduksi Dimensi
+# Praktikum Bab 11: Pca Reduksi Dimensi (mulai dari Implementasi Python)
 # Diekstrak dari bab-11-pca-reduksi-dimensi/praktikum-bab-11.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Sel ini saya jalankan paling dulu di Google Colab untuk memastikan semua paket yang dipakai di bab ini tersedia. Kalau saya menjalankannya di Jupyter lokal, sel ini tidak mengubah apa-apa karena paketnya memang sudah terpasang.
-
-# Praktikum Machine Learning: Bab 11
-# PCA dan Reduksi Dimensi
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 11 ini mengerjakan **Latihan Praktikum Modul Bab 11 bagian 11.12**, memakai dataset **Wine** (`sklearn.datasets.load_wine`) dan **Breast Cancer** (`sklearn.datasets.load_breast_cancer`). Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Curse of dimensionality:** semakin banyak fitur, data semakin jarang tersebar di ruang fitur sehingga model lebih mudah overfitting dan komputasi makin berat. Karena itu dimensi yang tidak penting sebaiknya direduksi.
-# - **PCA (Principal Component Analysis):** teknik reduksi dimensi tanpa label yang mencari arah (komponen utama) dengan varians terbesar. Setiap komponen menyimpan sebagian *explained variance* dari data aslinya.
-# - **Memilih jumlah komponen:** salah satu cara praktis adalah memakai *variance threshold*, misalnya ambil komponen secukupnya sampai varians kumulatif mencapai 80%, 90%, atau 95%. Di sklearn ini bisa langsung ditulis `PCA(n_components=0.95)`.
-# - **t-SNE:** teknik visualisasi non-linear yang bagus untuk melihat pengelompokan data di 2D/3D, tapi hasilnya stokastik (berubah tiap dijalankan tanpa `random_state`) dan tidak cocok dipakai sebagai preprocessing untuk model.
-# - **LDA (Linear Discriminant Analysis):** reduksi dimensi yang *supervised*, memakai label kelas untuk mencari proyeksi yang memaksimalkan jarak antar kelas sekaligus meminimalkan sebaran di dalam kelas.
-
-# 11.12 Latihan Praktikum (Modul Bab 11)
-#
-# Di bawah ini saya kerjakan dua praktikum dari bagian 11.12 modul: kompresi dimensi dengan PCA, lalu perbandingan visual PCA, t-SNE, dan LDA.
 
 # Praktikum 1: Kompresi Dimensi dengan PCA
 #

@@ -1,40 +1,7 @@
 # ============================================================
-# Praktikum Bab 04: Feature Engineering Pipeline
+# Praktikum Bab 04: Feature Engineering Pipeline (mulai dari Implementasi Python)
 # Diekstrak dari bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb
 # ============================================================
-
-# Praktikum Machine Learning: Bab 4
-# Feature Engineering: Konstruksi, Seleksi Fitur, dan Pipeline Scikit-Learn
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# *Notebook ini saya jalanin di Google Colab / Jupyter Notebook.*
-
-# Ringkasan Konsep
-#
-# **Feature construction (konstruksi fitur)** itu bikin fitur *baru* dari fitur mentah biar pola yang susah dilihat model jadi keliatan jelas. Contohnya rasio (`AveBedrms / AveRooms`), interaksi antar fitur, atau *binning* (ngubah numerik jadi kategorikal, misal bikin "wilayah" dari garis lintang). Bedanya sama *feature extraction* (mis. PCA): hasil konstruksi fitur tetep bisa dibaca manusia, kalau PCA enggak, namanya aja ilang.
-#
-# **Feature selection (seleksi fitur)**: milih subset fitur yang paling relevan. Ada tiga pendekatan:
-#
-# 1. **Filter**: tiap fitur dinilai pake skor statistik *tanpa* libatin model. Contoh `SelectKBest` pake skor chi-square. Cepet, tapi interaksi antar fitur diabaikan.
-# 2. **Wrapper**: subset fitur dievaluasi dengan ngelatih model beneran. Contoh **RFE** (*Recursive Feature Elimination*), yang buang fitur terlemah satu per satu. Lebih akurat, tapi mahal secara komputasi.
-# 3. **Embedded**: seleksi terjadi *selama* pelatihan lewat regularisasi. Contoh **Lasso/L1** yang maksa koefisien fitur gak penting jadi nol. Jalan tengah antara filter yang cepet dan wrapper yang akurat.
-#
-# **ColumnTransformer** nerapin transformasi *beda-beda* ke kelompok kolom yang beda dalam satu langkah. Misal `StandardScaler` buat kolom numerik, `OneHotEncoder` buat kategorikal nominal, `OrdinalEncoder` buat kategorikal ordinal. Semuanya jalan sekaligus di satu DataFrame campuran.
-#
-# **Pipeline** ngerangkai preprocessing + model jadi **satu objek**. Untungnya: `pipeline.fit(X_train)` cuma belajar statistik (mean, median, kategori) dari data latih, terus `pipeline.predict(data_baru)` otomatis nerapin preprocessing yang *persis sama*. Jadi gak ada risiko preprocessing pas training beda sama pas deployment.
-#
-# **Data leakage** itu "kebocoran" info data uji ke proses training. Contohnya nge-*fit* scaler/imputer ke *seluruh* data *sebelum* train-test split. Akibatnya statistik data uji ikut kepake buat ngelatih model, skor evaluasi keliatan bagus padahal palsu. Pipeline mencegah ini karena tiap transformasi cuma di-fit di data latih.
-
-# 4.16 Latihan Praktikum (Modul Bab 4)
-#
-# Bagian ini saya ngerjain Latihan Praktikum dari Modul Machine Learning Bab 4. Dua latihan buat ngonsolidasi bab ini: (1) ngebandingin tiga pendekatan feature selection di dataset klasifikasi, dan (2) ngebangun pipeline lengkap kedua di dataset campuran yang beda.
 
 # Praktikum 1 (4.3) - Membandingkan Tiga Pendekatan Feature Selection (Modul Bab 4)
 #

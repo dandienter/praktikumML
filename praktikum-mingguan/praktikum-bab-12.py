@@ -1,59 +1,7 @@
 # ============================================================
-# Praktikum Bab 12: Neural Networks
+# Praktikum Bab 12: Neural Networks (mulai dari Implementasi Python)
 # Diekstrak dari bab-12-neural-networks/praktikum-bab-12.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Cell di bawah ini mengecek apakah `tensorflow` sudah terinstall. Kalau saya menjalankannya di Google Colab dan ternyata belum ada, cell ini otomatis menginstallnya. Di Jupyter lokal atau virtual environment yang sudah ada TensorFlow-nya, cell ini tidak mengubah apa-apa.
-
-# Praktikum Machine Learning: Bab 12
-# Neural Networks
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 12 ini mengerjakan **Latihan Praktikum Modul Bab 12 bagian 12.14**, memakai dataset **Digits** (`sklearn.datasets.load_digits`, 10 kelas angka tulisan tangan) karena output modul memakai `Dense(10, softmax)`. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Perceptron dan MLP:** perceptron adalah unit neuron tunggal, sedangkan MLP (Multi-Layer Perceptron) menumpuk banyak neuron dalam beberapa hidden layer sehingga bisa mempelajari pola yang tidak linear.
-# - **Fungsi aktivasi:** `relu` dipakai di hidden layer agar model bisa menangkap hubungan non-linear, `softmax` dipakai di output layer untuk klasifikasi multi-kelas karena mengubah skor menjadi probabilitas.
-# - **Layer Dense:** setiap neuron terhubung ke semua neuron di layer sebelumnya, jadi layer ini yang menyimpan bobot yang dipelajari model.
-# - **Optimizer dan loss:** `adam` adalah optimizer adaptif yang umum dipakai, `sparse_categorical_crossentropy` adalah loss untuk klasifikasi multi-kelas dengan label bilangan bulat.
-# - **Epoch, batch, dan validation split:** satu epoch berarti model melihat seluruh data latih satu kali, `validation_split=0.2` menyisihkan 20 persen data latih untuk memantau performa tiap epoch.
-# - **Early stopping:** pelatihan dihentikan otomatis ketika `val_loss` berhenti membaik selama beberapa epoch (`patience`), supaya model tidak overfitting.
-
-# 12.14 Latihan Praktikum (Modul Bab 12)
-#
-# Di bawah ini saya kerjakan dua praktikum dari modul: eksperimen arsitektur MLP dan early stopping, lengkap dengan output dan grafiknya.
-
-# Persiapan Data
-#
-# Saya siapkan dulu datasetnya satu kali di sini supaya bisa dipakai ulang oleh kedua praktikum: load Digits, scaling dengan StandardScaler, lalu split 80 persen latih dan 20 persen test.
-
-import numpy as np
-np.random.seed(42)
-import tensorflow as tf
-tf.random.set_seed(42)
-tf.config.experimental.enable_op_determinism()  # hasil latih stabil antar run
-try:
-    import keras
-except ImportError:
-    from tensorflow import keras
-from sklearn.datasets import load_digits
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-
-X, y = load_digits(return_X_y=True)
-X = StandardScaler().fit_transform(X)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-print("X_train:", X_train.shape, "X_test:", X_test.shape)
 
 # Praktikum 1 - Eksperimen Arsitektur MLP
 #

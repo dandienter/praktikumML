@@ -1,5 +1,5 @@
 # ============================================================
-# Praktikum Bab 05: Decision Tree Pruning
+# Praktikum Bab 05: Decision Tree Pruning (mulai dari Implementasi Python)
 # Diekstrak dari bab-05-decision-tree-pruning/praktikum-bab-05.ipynb
 # ============================================================
 

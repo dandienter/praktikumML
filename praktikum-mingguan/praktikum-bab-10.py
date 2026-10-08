@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 10: Clustering
+# Praktikum Bab 10: Clustering (mulai dari Implementasi Python)
 # Diekstrak dari bab-10-clustering/praktikum-bab-10.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Kalau notebook ini dibuka di Google Colab, jalankan sel di bawah ini dulu untuk memastikan semua paket yang dipakai sudah tersedia. Kalau saya menjalankannya di Jupyter lokal, sel ini tidak mengubah apa-apa karena semua paketnya sudah terpasang di environment.
-
-# Praktikum Machine Learning: Bab 10
-# Clustering
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 10 ini mengerjakan **Latihan Praktikum Modul Bab 10 bagian 10.12**, memakai **data sintetis** pelanggan (sebagai pengganti dataset Mall Customer Segmentation dari Kaggle, sesuai izin modul) dari `sklearn.datasets.make_blobs`. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# * **Clustering itu unsupervised learning:** model mencari kelompok-kelompok sendiri dari pola datanya, tanpa diberi label target seperti pada klasifikasi.
-# * **K-Means:** pilih k titik centroid, tiap data ditempelkan ke centroid terdekat, centroid dihitung ulang dari rata-rata anggotanya, lalu diulang sampai tidak berubah lagi.
-# * **Elbow method:** plot nilai inertia (total kuadrat jarak tiap titik ke centroid clusternya) untuk berbagai nilai k. k optimal ada di "siku" grafik, yaitu titik tempat penurunan inertia mulai melandai.
-# * **Silhouette score:** mengukur seberapa cocok tiap titik dengan clusternya sendiri dibanding cluster tetangga terdekat. Nilainya dari -1 sampai 1, makin dekat ke 1 berarti pemisahan clusternya makin bagus.
-# * **Agglomerative clustering** menggabungkan titik atau cluster yang paling mirip secara bertahap dari bawah ke atas (hierarchical). **DBSCAN** mengelompokkan titik-titik yang padat bertetangga dan menandai titik yang sepi sebagai noise, sehingga cocok untuk cluster yang bentuknya tidak beraturan.
-
-# 10.12 Latihan Praktikum (Modul Bab 10)
-#
-# Di bab ini saya mengerjakan dua Latihan Praktikum dari modul bagian 10.12: pertama menentukan jumlah cluster yang optimal, lalu membandingkan tiga algoritma clustering pada dataset yang sama.
 
 # Praktikum 1 - Menentukan k Optimal
 #

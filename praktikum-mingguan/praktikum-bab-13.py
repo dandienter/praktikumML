@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 13: Convolutional Neural Networks
+# Praktikum Bab 13: Convolutional Neural Networks (mulai dari Implementasi Python)
 # Diekstrak dari bab-13-convolutional-neural-networks/praktikum-bab-13.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Kalau notebook ini dijalankan di Google Colab, jalankan cell di bawah dulu untuk memastikan `tensorflow` sudah terinstall. Saya menjalankannya di Jupyter lokal yang TensorFlow-nya sudah ada, jadi cell ini tidak mengubah apa-apa.
-
-# Praktikum Machine Learning: Bab 13
-# Convolutional Neural Networks
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 13 ini mengerjakan **Latihan Praktikum Modul Bab 13 bagian 13.12**, memakai dataset **CIFAR-10** (`keras.datasets.cifar10`). Karena training di CPU, saya pakai **subset** data sesuai arahan modul (500-1000 citra per kelas). Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Konvolusi dan filter:** layer konvolusi menggeser filter kecil ke seluruh citra untuk mendeteksi pola lokal seperti tepi, tekstur, dan bentuk.
-# - **Pooling (max pooling):** merampingkan ukuran peta fitur dengan mengambil nilai maksimum tiap jendela, sehingga model lebih tahan terhadap pergeseran kecil dan komputasinya lebih ringan.
-# - **Kenapa CNN cocok untuk citra:** bobot filter dipakai ulang di semua posisi (parameter sharing), jadi CNN mengenali pola di mana pun polanya muncul dalam citra.
-# - **Arsitektur sederhana:** tumpukan conv-pool untuk ekstraksi fitur, lalu flatten dan dense untuk klasifikasi akhir.
-# - **Transfer learning:** memakai ulang bobot model yang sudah dilatih di dataset besar (misal MobileNetV2 dari ImageNet), lalu hanya melatih classifier di atasnya. Cocok saat data kita sedikit.
-
-# 13.12 Latihan Praktikum (Modul Bab 13)
-#
-# Bagian ini mengerjakan dua praktikum dari modul: membangun CNN sederhana dari nol, lalu membandingkannya dengan transfer learning memakai MobileNetV2. Keduanya memakai subset CIFAR-10 yang sama.
 
 # Praktikum 1: CNN Sederhana dari Nol
 #

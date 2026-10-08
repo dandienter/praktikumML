@@ -1,52 +1,7 @@
 # ============================================================
-# Praktikum Bab 14: Mini Project End To End
+# Praktikum Bab 14: Mini Project End To End (mulai dari Implementasi Python)
 # Diekstrak dari bab-14-mini-project-end-to-end/praktikum-bab-14.ipynb
 # ============================================================
-
-# Praktikum Machine Learning: Bab 14
-# Mini Project End-to-End: Prediksi Penyakit Jantung
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# Proyek utama praktikum (Modul Bab 14, bagian 14.16): menyelesaikan proyek ML end-to-end
-# mengikuti seluruh tahapan CRISP-DM — dari pemilihan dataset, EDA, preprocessing,
-# feature engineering, training & tuning minimal 3 algoritma, evaluasi, sampai deployment.
-
-# Ringkasan Konsep
-#
-# * **CRISP-DM** punya 6 fase: Business Understanding, Data Understanding, Data Preparation,
-# Modeling, Evaluation, Deployment. Bab ini mempraktikkan keenamnya dalam satu proyek utuh.
-# * **GridSearchCV**: mencari kombinasi hyperparameter terbaik dengan mencoba semua kombinasi
-# dalam grid, dinilai dengan cross-validation. Butuh waktu lebih lama tapi hasilnya sistematis.
-# * **Deployment**: model yang sudah dilatih disimpan (misal `joblib`) lalu dibungkus aplikasi
-# (web Flask/bot Telegram) supaya bisa dipakai pengguna tanpa menjalankan notebook.
-# * Pada kasus medis, **recall lebih penting daripada akurasi**: lebih baik salah alarm
-# (false positive) daripada ada pasien sakit yang tidak terdeteksi (false negative).
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-# Dataset `heart.csv` di bab ini tersimpan di folder `data/` repo ini. Kalau notebook
-# dijalankan di Google Colab, jalankan cell di bawah dulu untuk mengunduhnya.
-
-# 14.16.1 Business Understanding (CRISP-DM Fase 1)
-#
-# **Tujuan proyek:** membangun model klasifikasi yang memprediksi apakah seorang pasien
-# berisiko penyakit jantung berdasarkan 13 fitur klinis (umur, tekanan darah, kolesterol, dll).
-#
-# **Konteks masalah:** penyakit jantung adalah penyebab kematian tertinggi di dunia.
-# Deteksi dini lewat skrining berbasis data bisa membantu tenaga medis memprioritaskan
-# pasien untuk pemeriksaan lanjutan.
-#
-# **Kriteria sukses:** model dengan **recall tinggi** (menangkap sebanyak mungkin pasien sakit)
-# tanpa mengorbankan precision terlalu jauh, lalu di-deploy sebagai aplikasi yang bisa dipakai.
-#
-# **Dataset:** Heart Disease UCI (Cleveland, 303 baris) — dataset publik yang sudah disetujui
-# untuk dipakai. Target dibinerkan: 0 = tidak sakit, 1 = sakit.
 
 # Praktikum 14.1 - Persiapan Library
 # Di bagian ini saya memuat semua library yang dipakai sepanjang bab ini.
@@ -86,7 +41,7 @@ print(df['target'].value_counts())
 print(df['target'].value_counts(normalize=True).round(3))
 df.head()
 
-# **Penjelasan output:** dataset bersih (tidak ada missing value — 6 baris bermasalah
+# **Penjelasan output:** dataset bersih (tidak ada missing value, 6 baris bermasalah
 # sudah dibuang saat preparasi dataset), target cukup seimbang (164 sehat vs 139 sakit),
 # sehingga tidak perlu teknik khusus untuk imbalance.
 
@@ -107,7 +62,7 @@ plt.tight_layout()
 plt.show()
 
 # **Penjelasan output:** pasien sakit cenderung berumur lebih tua (distribusi mengarah
-# ke kanan), dan kedua kelas jumlahnya berimbang — kabar baik untuk training.
+# ke kanan), dan kedua kelas jumlahnya berimbang, kabar baik untuk training.
 
 plt.figure(figsize=(10, 8))
 sns.heatmap(df.corr(), annot=True, fmt='.2f', cmap='coolwarm', center=0,
@@ -141,8 +96,8 @@ print('Proporsi sakit di train: %.3f | di test: %.3f' % (
 # Praktikum 14.4 - Feature Engineering
 # Saya membuat dua fitur turunan yang masuk akal secara medis:
 #
-# * `age_group`: kelompok umur (0=<45, 1=45-60, 2=>60) — risiko jantung naik dengan umur.
-# * `bp_chol_ratio`: rasio tekanan darah terhadap kolesterol — menangkap interaksi
+# * `age_group`: kelompok umur (0=<45, 1=45-60, 2=>60), risiko jantung naik dengan umur.
+# * `bp_chol_ratio`: rasio tekanan darah terhadap kolesterol, menangkap interaksi
 # dua faktor risiko utama.
 
 def add_features(d):
@@ -163,9 +118,9 @@ X_train_fe[['age', 'age_group', 'trestbps', 'chol', 'bp_chol_ratio']].head(3)
 # Praktikum 14.5 - Modeling & Tuning (CRISP-DM Fase 4)
 # Saya melatih **3 algoritma dari Bab 5-14** dengan `GridSearchCV` (5-fold stratified):
 #
-# 1. **Logistic Regression** (Bab 2/4) — baseline linear yang cepat dan interpretable.
-# 2. **Random Forest** (Bab 9) — ensemble tree yang kuat dan tahan noise.
-# 3. **SVM dengan kernel RBF** (Bab 8) — kuat untuk boundary non-linear.
+# 1. **Logistic Regression** (Bab 2/4), baseline linear yang cepat dan interpretable.
+# 2. **Random Forest** (Bab 9), ensemble tree yang kuat dan tahan noise.
+# 3. **SVM dengan kernel RBF** (Bab 8), kuat untuk boundary non-linear.
 #
 # Pipeline dipakai supaya scaling hanya di-fit di data train (mencegah data leakage).
 
@@ -244,7 +199,7 @@ plt.show()
 # * Model dengan recall tertinggi dan F1 kompetitif dipilih sebagai model final,
 # meskipun akurasinya bukan yang tertinggi.
 #
-# (Angka pastinya mengikuti hasil eksekusi di atas — prinsip pemilihannya tetap sama:
+# (Angka pastinya mengikuti hasil eksekusi di atas, prinsip pemilihannya tetap sama:
 # recall dulu, baru F1, terakhir akurasi.)
 
 # pilih model terbaik: recall tertinggi, tie-break dengan F1
@@ -274,11 +229,11 @@ print('Daftar fitur disimpan: fitur_heart.pkl')
 # (catatan: aplikasi web ini **bukan Streamlit**, melainkan web Flask custom
 # dengan desain ala situs kesehatan):
 #
-# 1. **Web app Flask** (`app.py`, live di https://hdpredictor.koyeb.app) — halaman
+# 1. **Web app Flask** (`app.py`, live di https://hdpredictor.koyeb.app), halaman
 # berisi panduan cara pakai, info dataset, info model, formulir 13 fitur klinis
 # (2 fitur turunan dihitung otomatis), tombol prediksi, hasil berupa klasifikasi
 # risiko + probabilitas, serta info kreator.
-# 2. **Bot Telegram** (`bot.py`, @hdpredictor_bot) — tanya-jawab 13 fitur lewat
+# 2. **Bot Telegram** (`bot.py`, @hdpredictor_bot), tanya-jawab 13 fitur lewat
 # tombol inline keyboard (angka seperti umur juga bisa diketik manual),
 # cocok didemokan dari HP saat presentasi.
 #
@@ -294,7 +249,7 @@ print('Daftar fitur disimpan: fitur_heart.pkl')
 # 3. Terima hasil prediksi + probabilitas. Kirim /batal untuk berhenti.
 #
 # Penting: form input pada aplikasi **harus konsisten** dengan seluruh fitur dan format
-# yang dipakai pipeline saat pelatihan — itulah gunanya `fitur_heart.pkl` dan fungsi
+# yang dipakai pipeline saat pelatihan, itulah gunanya `fitur_heart.pkl` dan fungsi
 # `add_features` yang sama persis.
 #
 # Kedua aplikasi ada di repository terpisah: `dandienter/heart-disease-predictor`,
@@ -352,7 +307,7 @@ print(f"Dengan feature engineering: F1={metrik_terbaik['f1']:.4f}, Recall={metri
 # (recall sebagai metrik utama untuk kasus medis), dan deployment (web Flask + bot Telegram).
 # 2. Feature engineering berbasis domain (`age_group`, `bp_chol_ratio`) menambah informasi
 # yang relevan secara medis.
-# 3. Model final dipilih berdasarkan **recall tertinggi** lalu F1 — karena pada kasus medis,
+# 3. Model final dipilih berdasarkan **recall tertinggi** lalu F1, karena pada kasus medis,
 # melewatkan pasien sakit (false negative) lebih berbahaya daripada salah alarm.
 # 4. Model disimpan sebagai `.pkl` dan dipakai ulang oleh aplikasi web Flask dan bot Telegram
 # dengan pipeline fitur yang identik, sehingga tidak ada train-serve skew.

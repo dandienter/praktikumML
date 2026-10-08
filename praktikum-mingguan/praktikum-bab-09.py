@@ -1,36 +1,7 @@
 # ============================================================
-# Praktikum Bab 09: Ensemble Methods
+# Praktikum Bab 09: Ensemble Methods (mulai dari Implementasi Python)
 # Diekstrak dari bab-09-ensemble-methods/praktikum-bab-09.ipynb
 # ============================================================
-
-# Sel 0 - Persiapan Awal (Khusus Google Colab)
-#
-# Di Google Colab, jalankan sel di bawah ini dulu untuk memastikan semua paket yang dipakai bab ini sudah tersedia. Di Jupyter Notebook lokal, sel ini tidak mengubah apa-apa.
-
-# Praktikum Machine Learning: Bab 9
-# Ensemble Methods
-#
-# | | |
-# |---|---|
-# | **Nama** | Ahmad Dandi Subhani |
-# | **NPM** | 202343500126 |
-# | **Kelas** | R7B |
-# | **Mata Kuliah** | Machine Learning |
-# | **Dosen** | Nurfidah Dwitiyanti, M.Si. |
-#
-# **Catatan:** notebook ini saya jalankan di Google Colab / Jupyter Notebook. Bab 9 ini mengerjakan **Latihan Praktikum Modul Bab 9 bagian 9.12**, memakai dataset **Breast Cancer** dari `sklearn.datasets.load_breast_cancer`. Tidak perlu file CSV apa pun.
-
-# Ringkasan Konsep
-#
-# - **Ensemble learning:** ide dasarnya menggabungkan banyak model lemah menjadi satu model yang lebih kuat dan stabil. Dua keluarga besarnya adalah **bagging** (model dilatih paralel di atas sampel bootstrap, lalu hasilnya dirata-rata/voting, contohnya Random Forest) dan **boosting** (model dilatih berurutan, tiap model baru fokus memperbaiki kesalahan model sebelumnya).
-# - **Random Forest:** ensemble dari banyak decision tree yang masing-masing dilatih di atas sampel bootstrap dengan subset fitur acak. Parameter penting **n_estimators** menentukan jumlah pohon: makin banyak pohon biasanya makin stabil, tapi waktu latihnya juga makin lama.
-# - **OOB score (Out-of-Bag):** karena tiap pohon hanya melihat sebagian data (sampel bootstrap), sisa data yang tidak terpakai bisa dipakai sebagai validasi gratis tanpa split tambahan. Skor ini biasanya mendekati akurasi validasi biasa.
-# - **AdaBoost:** boosting klasik yang memberi bobot lebih besar ke sampel yang salah diprediksi, lalu melatih model berikutnya dengan fokus ke sampel berat tersebut. Cocok untuk menaikkan performa model sederhana.
-# - **Gradient Boosting:** boosting yang membangun pohon baru untuk memprediksi sisa kesalahan (residual) dari gabungan pohon sebelumnya, jadi koreksinya dilakukan berurutan dan bertahap. Biasanya akurat, tapi lebih sensitif ke parameter dan lebih lambat dilatih.
-
-# 9.12 Latihan Praktikum (Modul Bab 9)
-#
-# Di bawah ini saya kerjakan dua praktikum dari modul: pengaruh `n_estimators` terhadap Random Forest, lalu perbandingan empat model ensemble/tree dengan Stratified k-Fold CV. Dataset yang dipakai sama, yaitu Breast Cancer dari scikit-learn.
 
 # Praktikum 1 - Pengaruh n_estimators
 #
