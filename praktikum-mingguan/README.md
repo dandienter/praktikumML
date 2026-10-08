@@ -31,7 +31,7 @@ File `latihan-5-1-pre-pruning.py` adalah ekstrak khusus Latihan 1 (bagian 5.1) B
 | Bab 2: Workflow CRISP-DM, Bias-Variance | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-02-workflow-crisp-dm-bias-variance/praktikum-bab-02.ipynb) |
 | Bab 3: Data Preparation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-03-data-preparation/praktikum-bab-03.ipynb) |
 | Bab 4: Feature Engineering & Pipeline | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb) |
-| Bab 5: Decision Tree & Pruning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab-05.ipynb) |
+| Bab 5: Decision Tree & Pruning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/praktikum-mingguan/praktikum-bab-05.ipynb) |
 | Bab 6: KNN & Naive Bayes | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-06-knn-naive-bayes/praktikum-bab-06.ipynb) |
 | Bab 7: Evaluasi Model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-07-evaluasi-model/praktikum-bab-07.ipynb) |
 | Bab 8: Support Vector Machine | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-08-support-vector-machine/praktikum-bab-08.ipynb) |
@@ -46,4 +46,4 @@ File `latihan-5-1-pre-pruning.py` adalah ekstrak khusus Latihan 1 (bagian 5.1) B
 
 - [Modul_Bab5_511_Implementasi_Python.pdf](Modul_Bab5_511_Implementasi_Python.pdf), modul lengkap Bab 5.11 (Praktikum 5.1–5.6 + interpretasi).
 
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/praktikum-mingguan/praktikum-bab5-511.ipynb) **praktikum-bab5-511.ipynb**, notebook Colab sesuai kode modul Bab 5.11 (5.1–5.6), penjelasan detail siap presentasi.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dandienter/praktikumML/blob/main/praktikum-mingguan/praktikum-bab-05.ipynb) **praktikum-bab-05.ipynb**, notebook Colab Bab 5 yang di dalamnya ada kode modul 5.11 (5.1–5.6) lengkap dengan penjelasan detail siap presentasi.
