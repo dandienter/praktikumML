@@ -12,7 +12,7 @@ agar file data terunduh otomatis.
 | praktikum-bab-03.ipynb | Data Preparation |
 | praktikum-bab-04.ipynb | Feature Engineering & Pipeline |
 | praktikum-bab-05.ipynb | Decision Tree & Pruning (isi: kode modul 5.11 lengkap + penjelasan siap presentasi) |
-| praktikum-bab-06.ipynb | KNN & Naive Bayes |
+| praktikum-bab-06.ipynb | KNN & Naive Bayes (isi: kode modul 6.16 lengkap + penjelasan siap presentasi) |
 | praktikum-bab-07.ipynb | Evaluasi Model |
 | praktikum-bab-08.ipynb | Support Vector Machine |
 | praktikum-bab-09.ipynb | Ensemble Methods |
@@ -48,3 +48,6 @@ File `latihan-5-1-pre-pruning.ipynb` adalah notebook khusus Latihan 1 (bagian 5.
 - [Presentasi_Bab5_Decision_Tree_Pruning.pdf](Presentasi_Bab5_Decision_Tree_Pruning.pdf), slide presentasi Bab 5 (14 slide, 16:9, kode 5.11 lengkap sesuai Colab + 5.12).
 - [Naskah_Presentasi_Bab5.pdf](Naskah_Presentasi_Bab5.pdf), naskah omongan per slide (estimasi 12-15 menit).
 - [Modul_Bab5_Implementasi_Python.pdf](Modul_Bab5_Implementasi_Python.pdf), modul lengkap Bab 5.11 (Praktikum 5.1-5.6 + interpretasi) dan 5.12 (Latihan Praktikum: grid search pre-pruning, CCP path).
+- [Presentasi_Bab6_KNN_Naive_Bayes.pdf](Presentasi_Bab6_KNN_Naive_Bayes.pdf), slide presentasi Bab 6 (14 slide, 16:9, kode 6.16 lengkap sesuai Colab + 6.17).
+- [Naskah_Presentasi_Bab6.pdf](Naskah_Presentasi_Bab6.pdf), naskah omongan per slide (estimasi 10-12 menit).
+- [Modul_Bab6_Implementasi_Python.pdf](Modul_Bab6_Implementasi_Python.pdf), modul lengkap Bab 6.16 (Praktikum 6.1-6.7 + interpretasi) dan 6.17 (Latihan Praktikum: KNN vs Naive Bayes + waktu, MultinomialNB teks).
