@@ -12,6 +12,7 @@ Mengikuti modul Bab 6 bagian 6.16 (Praktikum 6.1-6.7): membandingkan KNN dan Nai
 ## Isi
 - `praktikum-bab-06.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-06.pdf](praktikum-bab-06.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab6_Implementasi_Python.pdf](Modul_Bab6_Implementasi_Python.pdf)` - modul PDF format Bab 5 (cover full + daftar isi bisa diklik + penjelasan lengkap tiap kode dan hasil), isi sinkron dengan notebook di folder ini
 
 ## Sumber Data
 - `sklearn.datasets.load_wine` (dataset publik Wine Recognition: 178 baris, 13 fitur).

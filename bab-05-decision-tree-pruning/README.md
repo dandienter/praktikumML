@@ -12,6 +12,7 @@ Memahami teknik pruning untuk mengatasi overfitting pada decision tree lewat Lat
 ## Isi
 - `praktikum-bab-05.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-05.pdf](praktikum-bab-05.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab5_Implementasi_Python.pdf](Modul_Bab5_Implementasi_Python.pdf)` - modul PDF format Bab 5 (cover full + daftar isi bisa diklik + penjelasan lengkap tiap kode dan hasil), isi sinkron dengan notebook di folder ini
 
 ## Latihan Praktikum
 1. **Latihan 1 - Grid manual pre-pruning.** Grid search manual atas 12 kombinasi `max_depth` {2, 4, 6, None} x `min_samples_leaf` {1, 5, 10} pada Breast Cancer. Hasil terbaik: akurasi test 0,9474 (`max_depth=4`, `min_samples_leaf=10`). Dilengkapi heatmap akurasi per kombinasi.
