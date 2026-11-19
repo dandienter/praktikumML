@@ -12,6 +12,10 @@ Memahami cara kerja SVM (margin maksimum, kernel trick, parameter C dan gamma) l
 ## Isi
 - `praktikum-bab-08.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-08.pdf](praktikum-bab-08.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab8_Implementasi_Python.pdf](Modul_Bab8_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
+
+## Implementasi Python
+Menjalankan SVM secara end-to-end (Modul 8.10): Pipeline StandardScaler + SVC kernel RBF dengan GridSearchCV atas C {0.1, 1, 10, 100} dan gamma {0.001, 0.01, 0.1, 1}. Parameter terbaik C=10 dan gamma=0.01 (skor CV 0,9802), akurasi data uji 0,9825, dilengkapi heatmap peta akurasi grid.
 
 ## Sumber Data
 `sklearn.datasets.load_breast_cancer` (dataset publik Wisconsin Breast Cancer: 569 baris, 30 fitur). Tidak ada file yang perlu diunduh.

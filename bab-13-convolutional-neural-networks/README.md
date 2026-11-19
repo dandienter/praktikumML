@@ -12,6 +12,10 @@ Membangun CNN sederhana dari nol pada subset CIFAR-10 lalu membandingkannya deng
 ## Isi
 - `praktikum-bab-13.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-13.pdf](praktikum-bab-13.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab13_Implementasi_Python.pdf](Modul_Bab13_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
+
+## Implementasi Python
+Menjalankan CNN secara end-to-end (Modul 13.11) pada subset CIFAR-10 (500 citra per kelas latih, 100 per kelas uji): dua blok Conv2D + MaxPooling, Dense 64, Dropout 0.5, Softmax 10, dilatih 10 epoch lalu fine-tuning 5 epoch dengan learning rate 1e-4. Hasil: akurasi data uji 0,509 (akurasi validasi naik dari 0,532 menjadi 0,536 sesudah fine-tuning), dilengkapi visualisasi feature map lapisan konvolusi pertama.
 
 ## Sumber Data
 `keras.datasets.cifar10` (otomatis diunduh saat notebook dijalankan). Karena training di CPU, dipakai subset stratified: 500 citra per kelas untuk train (5.000 total) dan 100 citra per kelas untuk test (1.000 total). Tidak ada file yang perlu diunduh manual.

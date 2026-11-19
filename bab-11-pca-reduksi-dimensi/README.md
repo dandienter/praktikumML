@@ -12,6 +12,10 @@ Mengerjakan Latihan Praktikum Modul Bab 11 bagian 11.12: menentukan jumlah kompo
 ## Isi
 - `praktikum-bab-11.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-11.pdf](praktikum-bab-11.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab11_Implementasi_Python.pdf](Modul_Bab11_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
+
+## Implementasi Python
+Menjalankan reduksi dimensi secara end-to-end (Modul 11.11) pada dataset Wine: 5 komponen utama PCA mewakili 80,16% varians dan akurasi KNN justru naik dari 0,9333 (13 fitur asli) menjadi 0,9778 (5 komponen). Dilengkapi visualisasi PCA 2D, t-SNE, dan LDA.
 
 ## Sumber Data
 `sklearn.datasets.load_breast_cancer` (569 baris, 30 fitur) untuk Praktikum 1 dan `sklearn.datasets.load_wine` (178 baris, 13 fitur, 3 kelas) untuk Praktikum 2. Tidak ada file yang perlu diunduh.

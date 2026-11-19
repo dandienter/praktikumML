@@ -12,6 +12,7 @@ Memahami definisi, kategori, dan tahapan kerja Machine Learning melalui alur end
 ## Isi
 - `praktikum-bab-01.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-01.pdf](praktikum-bab-01.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab1_Implementasi_Python.pdf](Modul_Bab1_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 
 ## Sumber Data
 `sklearn.datasets.load_iris` (dataset publik Iris: 150 baris, 4 fitur, 3 spesies). Tidak ada file yang perlu diunduh.

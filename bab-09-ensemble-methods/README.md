@@ -12,7 +12,11 @@ Memahami ide ensemble (bagging vs boosting) lewat Latihan Praktikum Modul Bab 9 
 ## Isi
 - `praktikum-bab-09.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-09.pdf](praktikum-bab-09.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab9_Implementasi_Python.pdf](Modul_Bab9_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 - `grafik-n-estimators.png`, `grafik-banding-model.png` - grafik hasil praktikum
+
+## Implementasi Python
+Menjalankan ensemble learning secara end-to-end (Modul 9.11) pada dataset Wine: Decision Tree tunggal 0,9556, Random Forest 1,0000, AdaBoost 0,9778, Gradient Boosting 0,9778. OOB score Random Forest 0,9699, dilengkapi grafik feature importance.
 
 ## Sumber Data
 `sklearn.datasets.load_breast_cancer` (dataset publik Breast Cancer: 569 baris, 30 fitur). Tidak ada file yang perlu diunduh.

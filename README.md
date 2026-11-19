@@ -284,6 +284,7 @@ File CSV tersimpan di folder `data/` tiap bab — notebook bisa jalan **offline*
 | seaborn | 0.13.2 | Visualisasi statistik |
 | scikit-learn | 1.9.1 | Semua algoritma ML klasik |
 | imbalanced-learn | 0.14.2 | SMOTE & resampling |
+| TensorFlow / Keras | 2.21.0 | Deep learning: MLP (Bab 12) dan CNN (Bab 13) |
 | WeasyPrint | 70.0 | Pembangun PDF modul |
 
 ---
@@ -319,7 +320,7 @@ Klik badge bab yang ingin dibuka — notebook langsung terbuka di Colab:
 git clone https://github.com/dandienter/praktikumML.git
 cd praktikumML
 python -m venv .venv && source .venv/bin/activate
-pip install jupyter pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
+pip install jupyter pandas numpy matplotlib seaborn scikit-learn imbalanced-learn tensorflow
 jupyter notebook
 # buka bab-0N-.../praktikum-bab-0N.ipynb, jalankan semua cell berurutan
 ```
@@ -347,11 +348,35 @@ Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + dafta
 | Bab 13 | [praktikum-bab-13.pdf](bab-13-convolutional-neural-networks/praktikum-bab-13.pdf) |
 | Bab 14 | [praktikum-bab-14.pdf](bab-14-mini-project-end-to-end/praktikum-bab-14.pdf) |
 
+Selain itu, Bab 1-13 juga punya **Modul PDF format buku** (`Modul_BabN_Implementasi_Python.pdf`): cover + penjelasan lengkap tiap langkah kode dan hasil + interpretasi, isinya sinkron dengan notebook masing-masing bab:
+
+| Bab | Modul Format Buku |
+|-----|-----|
+| Bab 1 | [Modul_Bab1_Implementasi_Python.pdf](bab-01-konsep-dasar-machine-learning/Modul_Bab1_Implementasi_Python.pdf) |
+| Bab 2 | [Modul_Bab2_Implementasi_Python.pdf](bab-02-workflow-crisp-dm-bias-variance/Modul_Bab2_Implementasi_Python.pdf) |
+| Bab 3 | [Modul_Bab3_Implementasi_Python.pdf](bab-03-data-preparation/Modul_Bab3_Implementasi_Python.pdf) |
+| Bab 4 | [Modul_Bab4_Implementasi_Python.pdf](bab-04-feature-engineering-pipeline/Modul_Bab4_Implementasi_Python.pdf) |
+| Bab 5 | [Modul_Bab5_Implementasi_Python.pdf](bab-05-decision-tree-pruning/Modul_Bab5_Implementasi_Python.pdf) |
+| Bab 6 | [Modul_Bab6_Implementasi_Python.pdf](bab-06-knn-naive-bayes/Modul_Bab6_Implementasi_Python.pdf) |
+| Bab 7 | [Modul_Bab7_Implementasi_Python.pdf](bab-07-evaluasi-model/Modul_Bab7_Implementasi_Python.pdf) |
+| Bab 8 | [Modul_Bab8_Implementasi_Python.pdf](bab-08-support-vector-machine/Modul_Bab8_Implementasi_Python.pdf) |
+| Bab 9 | [Modul_Bab9_Implementasi_Python.pdf](bab-09-ensemble-methods/Modul_Bab9_Implementasi_Python.pdf) |
+| Bab 10 | [Modul_Bab10_Implementasi_Python.pdf](bab-10-clustering/Modul_Bab10_Implementasi_Python.pdf) |
+| Bab 11 | [Modul_Bab11_Implementasi_Python.pdf](bab-11-pca-reduksi-dimensi/Modul_Bab11_Implementasi_Python.pdf) |
+| Bab 12 | [Modul_Bab12_Implementasi_Python.pdf](bab-12-neural-networks/Modul_Bab12_Implementasi_Python.pdf) |
+| Bab 13 | [Modul_Bab13_Implementasi_Python.pdf](bab-13-convolutional-neural-networks/Modul_Bab13_Implementasi_Python.pdf) |
+
 **Membangun ulang PDF** (butuh WeasyPrint):
 
 ```bash
 .venv/bin/python tools/build_pdf.py <folder>/praktikum-bab-0N.ipynb \
   --bab N --judul "<Judul Bab>" --out <folder>/praktikum-bab-0N.pdf
+```
+
+Modul format buku dibangun dari notebook yang sudah dieksekusi dengan renderer di `tools/modul_pdf/render_modul.py`:
+
+```bash
+.venv/bin/python tools/modul_pdf/render_modul.py N "<Judul Bab>"
 ```
 
 ---

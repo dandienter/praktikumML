@@ -12,6 +12,10 @@ Memahami clustering (unsupervised learning) dan menentukan jumlah cluster optima
 ## Isi
 - `praktikum-bab-10.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-10.pdf](praktikum-bab-10.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab10_Implementasi_Python.pdf](Modul_Bab10_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
+
+## Implementasi Python
+Menjalankan clustering secara end-to-end (Modul 10.11) pada 300 pelanggan sintetis dari tiga segmen: K-Means dan Hierarchical sama-sama meraih Silhouette Score 0,7185, sedangkan DBSCAN membentuk 2 cluster padat plus 1 titik noise dengan Silhouette 0,7298. Dilengkapi visualisasi scatter ketiga algoritma berdampingan.
 
 ## Sumber Data
 Data sintetis pelanggan dari `sklearn.datasets.make_blobs` (1000 baris, 2 fitur: "Annual Income" dan "Spending Score", 5 pusat cluster; pengganti dataset Mall Customer Segmentation dari Kaggle sesuai izin modul). Tidak ada file yang perlu diunduh.

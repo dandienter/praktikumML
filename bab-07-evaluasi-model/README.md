@@ -12,6 +12,10 @@ Menyusun laporan evaluasi model klasifikasi yang komprehensif (confusion matrix,
 ## Isi
 - `praktikum-bab-07.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-07.pdf](praktikum-bab-07.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab7_Implementasi_Python.pdf](Modul_Bab7_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
+
+## Implementasi Python
+Menjalankan evaluasi model secara end-to-end (Modul 7.12): Logistic Regression pada Breast Cancer. Confusion matrix TP=71, FP=1, FN=1, TN=41; akurasi 0,9825; F1 0,9861; Stratified 5-Fold CV menghasilkan F1 rata-rata 0,9794 +/- 0,0127; dilengkapi kurva ROC dari probabilitas prediksi.
 
 ## Sumber Data
 `sklearn.datasets.load_breast_cancer` (dataset publik Breast Cancer Wisconsin: 569 baris, 30 fitur, 2 kelas). Tidak ada file yang perlu diunduh.

@@ -10,9 +10,13 @@
 Latihan Praktikum Bab 4: membandingkan tiga pendekatan feature selection (filter, wrapper, embedded) dan membangun pipeline lengkap dengan ColumnTransformer (dataset Breast Cancer + Titanic).
 
 ## Isi
-- `praktikum-bab-04.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
+- `praktikum-bab-04.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-04.pdf](praktikum-bab-04.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab4_Implementasi_Python.pdf](Modul_Bab4_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 - `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
+
+## Implementasi Python
+Menjalankan feature engineering secara end-to-end (Modul 4.10-4.15): dataset properti sintetis 500 data, fitur konstruksi `luas_per_kamar` dan `kategori_umur`, lalu ColumnTransformer (imputasi, scaling, one-hot) dibungkus Pipeline dengan Random Forest Regressor. Hasil: R2 data latih 0,9893 dan R2 data uji 0,9114.
 
 ## Latihan Praktikum
 - **Praktikum 1 - Membandingkan tiga pendekatan feature selection (dataset Breast Cancer):** filter (`SelectKBest` chi-square), wrapper (`RFE` + LogisticRegression), embedded (L1 LogisticRegression via `SelectFromModel`). Masing-masing memilih 10 fitur terbaik; hasilnya dibandingkan dalam satu tabel plus grafik 10 fitur dengan skor chi-square tertinggi.

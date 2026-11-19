@@ -10,9 +10,13 @@
 Memahami 6 fase CRISP-DM lewat studi kasus nyata dan cara mendiagnosis bias-variance lewat learning curve (data sintetis + Decision Tree).
 
 ## Isi
-- `praktikum-bab-02.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
+- `praktikum-bab-02.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
 - `[praktikum-bab-02.pdf](praktikum-bab-02.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
+- `[Modul_Bab2_Implementasi_Python.pdf](Modul_Bab2_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 - `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
+
+## Implementasi Python
+Menjalankan alur diagnosis bias-variance secara end-to-end (Modul 2.12): dataset sintetis 1000 sampel (kelas 80/20), stratified split, Decision Tree `max_depth=4`, dan learning curve cross-validation 5 fold. Hasil: skor latih akhir 0,870 dan skor validasi 0,836 (gap kecil, model seimbang), akurasi data uji 0,835.
 
 ## Latihan Praktikum
 - **Latihan 1 - Memetakan proyek nyata ke CRISP-DM:** studi kasus prediksi churn pelanggan telekomunikasi (dataset Telco Customer Churn, 7.043 pelanggan). Eksplorasi data menemukan sinyal bisnis terkuat di `Contract` (month-to-month churn 42,7% vs kontrak 2 tahun 2,8%), lalu tiap temuan dipetakan ke 6 fase CRISP-DM dengan aktivitas konkret.
