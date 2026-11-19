@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-04-feature-engineering-pipeline/praktikum-bab-04.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-04.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab4_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Latihan Praktikum Bab 4: membandingkan tiga pendekatan feature selection (filter
 
 ## Isi
 - `praktikum-bab-04.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-04.pdf](praktikum-bab-04.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab4_Implementasi_Python.pdf](Modul_Bab4_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 - `data/` - dataset yang dipakai notebook (format CSV, bisa dipakai offline)
 

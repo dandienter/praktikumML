@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-10-clustering/praktikum-bab-10.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-10.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab10_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Memahami clustering (unsupervised learning) dan menentukan jumlah cluster optima
 
 ## Isi
 - `praktikum-bab-10.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-10.pdf](praktikum-bab-10.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab10_Implementasi_Python.pdf](Modul_Bab10_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 
 ## Implementasi Python

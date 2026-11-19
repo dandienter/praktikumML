@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-05-decision-tree-pruning/praktikum-bab-05.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-05.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab5_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Memahami teknik pruning untuk mengatasi overfitting pada decision tree lewat Lat
 
 ## Isi
 - `praktikum-bab-05.ipynb` - notebook Latihan Praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-05.pdf](praktikum-bab-05.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab5_Implementasi_Python.pdf](Modul_Bab5_Implementasi_Python.pdf)` - modul PDF format Bab 5 (cover full + daftar isi bisa diklik + penjelasan lengkap tiap kode dan hasil), isi sinkron dengan notebook di folder ini
 
 ## Latihan Praktikum

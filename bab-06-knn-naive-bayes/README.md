@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-06-knn-naive-bayes/praktikum-bab-06.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-06.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab6_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Mengikuti modul Bab 6 bagian 6.16 (Praktikum 6.1-6.7): membandingkan KNN dan Nai
 
 ## Isi
 - `praktikum-bab-06.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-06.pdf](praktikum-bab-06.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab6_Implementasi_Python.pdf](Modul_Bab6_Implementasi_Python.pdf)` - modul PDF format Bab 5 (cover full + daftar isi bisa diklik + penjelasan lengkap tiap kode dan hasil), isi sinkron dengan notebook di folder ini
 
 ## Sumber Data

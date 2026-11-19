@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-03-data-preparation/praktikum-bab-03.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-03.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab3_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Mengerjakan **Latihan Praktikum Modul Bab 3 bagian 3.10**: membandingkan strateg
 
 ## Isi
 - `praktikum-bab-03.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-03.pdf](praktikum-bab-03.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab3_Implementasi_Python.pdf](Modul_Bab3_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 
 ## Latihan yang Dikerjakan

@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-11-pca-reduksi-dimensi/praktikum-bab-11.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-11.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab11_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Mengerjakan Latihan Praktikum Modul Bab 11 bagian 11.12: menentukan jumlah kompo
 
 ## Isi
 - `praktikum-bab-11.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-11.pdf](praktikum-bab-11.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab11_Implementasi_Python.pdf](Modul_Bab11_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 
 ## Implementasi Python

@@ -3,7 +3,7 @@
   <a href="https://colab.research.google.com/github/dandienter/praktikumML/blob/main/bab-01-konsep-dasar-machine-learning/praktikum-bab-01.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
   </a>
-  <a href="praktikum-bab-01.pdf">📄 Modul PDF</a>
+  <a href="Modul_Bab1_Implementasi_Python.pdf">📄 Modul PDF</a>
 </p>
 
 ## Tujuan
@@ -11,7 +11,6 @@ Memahami definisi, kategori, dan tahapan kerja Machine Learning melalui alur end
 
 ## Isi
 - `praktikum-bab-01.ipynb` - notebook praktikum (sudah dieksekusi, lengkap dengan output & visualisasi)
-- `[praktikum-bab-01.pdf](praktikum-bab-01.pdf)` - modul PDF bergaya modul (cover + daftar isi + kode + output + visualisasi)
 - `[Modul_Bab1_Implementasi_Python.pdf](Modul_Bab1_Implementasi_Python.pdf)` - modul PDF format buku (cover + penjelasan lengkap tiap kode dan hasil + interpretasi), isi sinkron dengan notebook di folder ini
 
 ## Sumber Data

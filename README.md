@@ -329,28 +329,9 @@ jupyter notebook
 
 ## 📄 Modul PDF
 
-Setiap bab tersedia dalam versi **PDF bergaya modul** (cover + identitas + daftar isi + kode + output + visualisasi), dibaca offline:
+Setiap bab punya **Modul PDF format buku** (`Modul_BabN_Implementasi_Python.pdf`): cover + penjelasan lengkap tiap langkah kode dan hasil + interpretasi, isinya sinkron dengan notebook masing-masing bab dan bisa dibaca offline:
 
-| Bab | PDF |
-|-----|-----|
-| Bab 1 | [praktikum-bab-01.pdf](bab-01-konsep-dasar-machine-learning/praktikum-bab-01.pdf) |
-| Bab 2 | [praktikum-bab-02.pdf](bab-02-workflow-crisp-dm-bias-variance/praktikum-bab-02.pdf) |
-| Bab 3 | [praktikum-bab-03.pdf](bab-03-data-preparation/praktikum-bab-03.pdf) |
-| Bab 4 | [praktikum-bab-04.pdf](bab-04-feature-engineering-pipeline/praktikum-bab-04.pdf) |
-| Bab 5 | [praktikum-bab-05.pdf](bab-05-decision-tree-pruning/praktikum-bab-05.pdf) |
-| Bab 6 | [praktikum-bab-06.pdf](bab-06-knn-naive-bayes/praktikum-bab-06.pdf) |
-| Bab 7 | [praktikum-bab-07.pdf](bab-07-evaluasi-model/praktikum-bab-07.pdf) |
-| Bab 8 | [praktikum-bab-08.pdf](bab-08-support-vector-machine/praktikum-bab-08.pdf) |
-| Bab 9 | [praktikum-bab-09.pdf](bab-09-ensemble-methods/praktikum-bab-09.pdf) |
-| Bab 10 | [praktikum-bab-10.pdf](bab-10-clustering/praktikum-bab-10.pdf) |
-| Bab 11 | [praktikum-bab-11.pdf](bab-11-pca-reduksi-dimensi/praktikum-bab-11.pdf) |
-| Bab 12 | [praktikum-bab-12.pdf](bab-12-neural-networks/praktikum-bab-12.pdf) |
-| Bab 13 | [praktikum-bab-13.pdf](bab-13-convolutional-neural-networks/praktikum-bab-13.pdf) |
-| Bab 14 | [praktikum-bab-14.pdf](bab-14-mini-project-end-to-end/praktikum-bab-14.pdf) |
-
-Selain itu, Bab 1-13 juga punya **Modul PDF format buku** (`Modul_BabN_Implementasi_Python.pdf`): cover + penjelasan lengkap tiap langkah kode dan hasil + interpretasi, isinya sinkron dengan notebook masing-masing bab:
-
-| Bab | Modul Format Buku |
+| Bab | Modul PDF |
 |-----|-----|
 | Bab 1 | [Modul_Bab1_Implementasi_Python.pdf](bab-01-konsep-dasar-machine-learning/Modul_Bab1_Implementasi_Python.pdf) |
 | Bab 2 | [Modul_Bab2_Implementasi_Python.pdf](bab-02-workflow-crisp-dm-bias-variance/Modul_Bab2_Implementasi_Python.pdf) |
@@ -365,15 +346,9 @@ Selain itu, Bab 1-13 juga punya **Modul PDF format buku** (`Modul_BabN_Implement
 | Bab 11 | [Modul_Bab11_Implementasi_Python.pdf](bab-11-pca-reduksi-dimensi/Modul_Bab11_Implementasi_Python.pdf) |
 | Bab 12 | [Modul_Bab12_Implementasi_Python.pdf](bab-12-neural-networks/Modul_Bab12_Implementasi_Python.pdf) |
 | Bab 13 | [Modul_Bab13_Implementasi_Python.pdf](bab-13-convolutional-neural-networks/Modul_Bab13_Implementasi_Python.pdf) |
+| Bab 14 | [Modul_Bab14_Implementasi_Python.pdf](bab-14-mini-project-end-to-end/Modul_Bab14_Implementasi_Python.pdf) |
 
-**Membangun ulang PDF** (butuh WeasyPrint):
-
-```bash
-.venv/bin/python tools/build_pdf.py <folder>/praktikum-bab-0N.ipynb \
-  --bab N --judul "<Judul Bab>" --out <folder>/praktikum-bab-0N.pdf
-```
-
-Modul format buku dibangun dari notebook yang sudah dieksekusi dengan renderer di `tools/modul_pdf/render_modul.py`:
+**Membangun ulang Modul PDF** (butuh WeasyPrint) dari notebook yang sudah dieksekusi, dengan renderer di `tools/modul_pdf/render_modul.py`:
 
 ```bash
 .venv/bin/python tools/modul_pdf/render_modul.py N "<Judul Bab>"
